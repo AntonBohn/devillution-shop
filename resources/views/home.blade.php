@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
+@extends('layout.default')
 
-    <title></title></head>
-<body>
-<header>
-    <h1>Mein Shop</h1>
-    <label>
-        <input type="text" placeholder="Suche">
-    </label>
-</header>
-<h2>Für Sie</h2>
-
-
-<ul>
-@foreach($products as $product)
-    <li>{{ $product->name }} {{ $product->price }}</li>
-@endforeach
-</ul>
-
-
-</body>
-
-
-</html>
+@section('content')
+    <header>
+        <h1>Mein Shop</h1>
+        <label>
+            <input type="text" placeholder="Suche">
+        </label>
+    </header>
+    <h2>Für Sie</h2>
+    <ul>
+            @foreach($products as $product)
+                @include('catalog.product.list.tile', ['product' => $product])
+        @endforeach
+    </ul>
+@endsection
