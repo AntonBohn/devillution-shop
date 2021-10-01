@@ -8,7 +8,7 @@
         </label>
     </header>
     <h2>Für Sie</h2>
-    <ul>
+    <ul class="grid-container">
             @foreach($products as $product)
                 @include('catalog.product.list.tile', ['product' => $product])
         @endforeach
