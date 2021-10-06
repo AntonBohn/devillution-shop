@@ -2,7 +2,7 @@
 
 @section('content')
     <header>
-        <h1><span class="iconify" data-icon="mdi-nuke"></span>NukeStore</h1>
+        <h1><span class="iconify" data-icon="mdi-nuke"></span>Nuke WareStore</h1>
         <label>
             <input type="text" placeholder="Suche">
         </label>
