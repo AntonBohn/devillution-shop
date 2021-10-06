@@ -1,7 +1,27 @@
 .product-tile {
-    color: black;
+    min-height: 400px;
+    text-align: center;
+    background: #d7d7d7;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 4fr 2fr;
 }
-.product-tile img {
-    width: 200px;
-    height: 200px;
+
+.product-tile .image-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-tile .image-wrapper img {
+    width: 100%;
+    transition: transform 200ms linear;
+}
+
+.product-tile:hover .image-wrapper img {
+    transform: scale(1.1);
 }

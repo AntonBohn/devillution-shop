@@ -1,14 +1,6 @@
-.grid-container {
+.product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-gap: 5px;
-    justify-items: center;
-    align-items: center;
+    gap: 16px;
     list-style-type: none;
 }
-.product-tile {
-    background: white;
-    text-align: center;
-    border: black 5px solid;
-}
-
