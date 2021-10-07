@@ -1,31 +1,32 @@
 h1 {
-    --gradient-100: radial-gradient(hsl(0, 0%, 5.9%), hsl(160.3, 50%, 50%));
-    --gradient-200: radial-gradient(hsl(339.9, 100%, 45%), hsl(169.7, 60%, 45%));
+    --gradient-100: radial-gradient(hsl(0, 0%, 5.9%), hsl(619.3, 50%, 50%));
+    /*--gradient-200: radial-gradient(hsl(0, 0%, 5.9%), hsl(151.7, 60%, 50%));*/
     --the-gradient: var(--gradient-100);
     font-size: 6em;
     background: var(--hero-bg-grunge), var(--the-gradient);
     background-clip: text;
     color: transparent;
-    transform: rotate(0deg);
+    /*transform: rotate(0deg);*/
     background-blend-mode: overlay;
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1566793474285-2decf0fc182a?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDl8Sjl5clBhSFhSUVl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-    height: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1586078875290-c22eb791ad5d?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE3MTN8Sjl5clBhSFhSUVl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    /*height: 50%;*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    /*position: relative;*/
+    height: 30vh;
 }
 
 .hero-text {
     text-align: center;
-    position: absolute;
+    /*position: absolute;*/
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    /*transform: translate(-50%, -50%);*/
+    /*color: white;*/
 }
 
 .hero-text button {
