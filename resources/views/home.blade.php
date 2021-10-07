@@ -2,11 +2,9 @@
 
 @section('content')
     <header>
-        <h1><span class="iconify" data-icon="mdi-nuke"></span>Nuke WareStore</h1>
-        <label>
-            <input type="text" placeholder="Suche">
-        </label>
+        @include('components.hero', ['header' => 'Nuke Ware Store'])
     </header>
+    <span class="iconify" data-icon="mdi-nuke"></span>
     <h2>Für Sie Empfohlen</h2>
     <ul class="product-list">
         @foreach($products as $product)
