@@ -38,9 +38,7 @@ html {
     margin: 0;
     padding: 0;
     line-height: 1;
-
 }
-
 
 .product-tile {
     min-height: 400px;
@@ -76,6 +74,3 @@ html {
     gap: 16px;
     list-style-type: none;
 }
-
-
-
