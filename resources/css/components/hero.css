@@ -1,22 +1,11 @@
-h1 {
-    --gradient-100: radial-gradient(hsl(0, 0%, 5.9%), hsl(619.3, 50%, 50%));
-    --gradient-200: radial-gradient(hsl(0, 0%, 5.9%), hsl(151.7, 60%, 50%));
-    --the-gradient: var(--gradient-100);
-    font-size: 6em;
-    --hero-bg-grunge: url(/img/grunge.png);
-    background: var(--hero-bg-grunge);
-    background-clip: text;
-    color: transparent;
-    background-blend-mode: overlay;
-    font-family: 'Saira Stencil One', cursive;
-}
-
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1586078875290-c22eb791ad5d?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE3MTN8Sjl5clBhSFhSUVl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 30vh;
+    display: grid;
+    place-content: center;
 }
 
 .hero-text {
@@ -25,18 +14,20 @@ h1 {
     left: 50%;
 }
 
-.hero-text button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 10px 25px;
-    color: black;
-    background-color: #ddd;
-    text-align: center;
-    cursor: pointer;
+.hero-image h1 {
+    --gradient-100: radial-gradient(hsl(0, 0%, 5.9%), hsl(619.3, 50%, 50%));
+    --gradient-200: radial-gradient(hsl(0, 0%, 5.9%), hsl(151.7, 60%, 50%));
+    --the-gradient: var(--gradient-100);
+    --hero-bg-grunge: url(/img/grunge.png);
+    background: var(--hero-bg-grunge);
+    background-clip: text;
+    color: transparent;
+    background-blend-mode: overlay;
+    font-family: 'Saira Stencil One', cursive;
+    font-size: clamp(35px, 6vw, 100px);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+
 }
 
-.hero-text button:hover {
-    background-color: #555;
-    color: white;
-}
