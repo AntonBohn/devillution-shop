@@ -2081,9 +2081,15 @@ module.exports = {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigation */ "./resources/js/navigation.js");
+/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_navigation__WEBPACK_IMPORTED_MODULE_0__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+
 
 /***/ }),
 
@@ -2120,6 +2126,20 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/navigation.js":
+/*!************************************!*\
+  !*** ./resources/js/navigation.js ***!
+  \************************************/
+/***/ (() => {
+
+var menuButton = document.querySelector('.icons .button-menu');
+var mainNavigation = document.querySelector('#main-navigation');
+menuButton.addEventListener('click', function () {
+  mainNavigation.classList.toggle('active');
+});
 
 /***/ }),
 
