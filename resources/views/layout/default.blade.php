@@ -5,7 +5,7 @@
 </head>
 <body>
     <header>
-        <span class="iconify" data-icon="mdi-nuke" ></span>
+        <span class="iconify logo" data-icon="mdi-nuke"></span>
     </header>
     <main>
         @yield('content')
