@@ -15,6 +15,9 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+.logo {
+    font-size: 2rem;
+}
 h1 {
     grid-area: header;
 }
@@ -54,9 +57,9 @@ main {
 @media (min-width: 768px) {
     body {
         grid-template-areas:
-                "header  header  header  header  header  header  header  header  header  header  header  icons"
-                "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
-                "content content content content content content content content content content content content";
+            "header  header  header  header  header  header  header  header  header  header  header  icons"
+            "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
+            "content content content content content content content content content content content content";
         height: revert;
         overflow: revert;
     }
@@ -67,6 +70,7 @@ main {
         grid-auto-flow: column;
         border: revert;
         background: lightgray;
+        transform: translateY(0);
     }
     #main-navigation div {
         display: revert;
@@ -75,6 +79,11 @@ main {
         position: revert;
         inset: revert;
         border: revert;
+        justify-content: revert;
+        grid-template-columns: -webkit-min-content -webkit-min-content;
+        grid-template-columns: min-content min-content;
+        justify-self: end;
+        padding: revert;
     }
     .button-menu {
         display: none;
