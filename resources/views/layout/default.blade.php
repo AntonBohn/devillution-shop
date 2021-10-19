@@ -7,9 +7,14 @@
     <header>
         <span class="iconify logo" data-icon="mdi-nuke"></span>
     </header>
-    <main>
-        @yield('content')
-    </main>
+    <div class="content">
+        <main>
+            @yield('content')
+        </main>
+        <footer>
+            @include('layout.footer')
+        </footer>
+    </div>
     <nav id="main-navigation">
         <div>Maus</div>
         <div>Tastatur</div>
