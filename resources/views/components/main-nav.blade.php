@@ -2,6 +2,6 @@
     <div>Maus</div>
     <div>Tastatur</div>
     <div>Mauspad</div>
-    <div>Monitior</div>
+    <div>Monitor</div>
     <div>Headset</div>
 </nav>

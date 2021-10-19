@@ -158,6 +158,35 @@ header h2 {
     }
 }
 
+#mini-search {
+    border-top: 2px solid black;
+    position: fixed;
+    z-index: 0;
+    inset: auto 0 calc(1px + 1rem + (2rem * 1.25));
+    background: white;
+    transform: translateY(100%);
+    transition: transform 200ms ease-out;
+}
+
+#mini-search label {
+    display: flex;
+}
+#mini-search.active {
+    transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+    #mini-search {
+        position: revert;
+        inset: revert;
+        transform: revert;
+        border: revert;
+        grid-area: search;
+        display: grid;
+        place-items: center;
+    }
+}
+
 footer {
     position: relative;
     display: flex;

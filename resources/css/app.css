@@ -8,6 +8,7 @@ Common layout parts
  */
 @import "components/header.css";
 @import "components/main-navigation.css";
+@import "components/mini-search.css";
 @import "components/footer.css";
 /**
 Common components
