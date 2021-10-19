@@ -7,8 +7,10 @@
 Common layout parts
  */
 @import "components/header.css";
-@import "components/main-navigation.css";
+@import "components/main-nav.css";
 @import "components/mini-search.css";
+@import "components/action-icons.css";
+@import "components/slide-up-menu.css";
 @import "components/footer.css";
 /**
 Common components

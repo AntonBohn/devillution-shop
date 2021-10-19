@@ -1,0 +1,27 @@
+.action-icons {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid black;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    padding:  0 1rem;
+    background: white;
+    font-size: 2rem;
+    grid-area: icons
+}
+.action-icons [class^="button-"] {
+    padding: .5rem;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .action-icons {
+        position: revert;
+        inset: revert;
+        border: revert;
+        justify-content: revert;
+        grid-template-columns: min-content min-content;
+        justify-self: end;
+        padding: revert;
+    }
+}

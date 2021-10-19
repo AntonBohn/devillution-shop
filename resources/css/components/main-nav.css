@@ -1,0 +1,13 @@
+#main-nav {
+    grid-area: nav;
+}
+@media (min-width: 768px) {
+    #main-nav {
+        display: grid;
+        grid-auto-flow: column;
+        background: lightgray;
+    }
+    #main-nav div {
+        display: revert;
+    }
+}

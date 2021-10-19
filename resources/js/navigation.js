@@ -1,12 +1,13 @@
-const menuButton = document.querySelector('.icons .button-menu');
-const searchButton = document.querySelector('.icons .button-search');
-const mainNavigation = document.querySelector('#main-navigation');
-const miniSearch = document.querySelector('#mini-search');
-if (mainNavigation && menuButton) {
-    searchButton.addEventListener('click', function () {
-        miniSearch.classList.toggle('active');
+const slideUpTrigger = document.querySelectorAll('.slide-up-trigger');
+slideUpTrigger.forEach(t => {
+    t.addEventListener('click', () => {
+
+        document.querySelector('#' + t.dataset.slide)
+            .classList.toggle('active');
+
+        Array.from(slideUpTrigger).filter(i => i !== t).forEach(s => {
+            document.querySelector('#' + s.dataset.slide)
+                .classList.remove('active');
+        })
     })
-    menuButton.addEventListener('click', function () {
-        mainNavigation.classList.toggle('active');
-    })
-}
+});

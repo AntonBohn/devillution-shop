@@ -1,4 +1,4 @@
-<nav id="main-navigation">
+<nav id="main-nav" class="slide-up-container">
     <div>Maus</div>
     <div>Tastatur</div>
     <div>Mauspad</div>
