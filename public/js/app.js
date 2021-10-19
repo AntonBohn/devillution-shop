@@ -2137,9 +2137,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 var menuButton = document.querySelector('.icons .button-menu');
 var mainNavigation = document.querySelector('#main-navigation');
-menuButton.addEventListener('click', function () {
-  mainNavigation.classList.toggle('active');
-});
+
+if (mainNavigation && menuButton) {
+  menuButton.addEventListener('click', function () {
+    mainNavigation.classList.toggle('active');
+  });
+}
 
 /***/ }),
 
