@@ -13,14 +13,17 @@ body {
     height: 100vh;
     overflow: hidden;
     color: var(--clr-fg-100);
+    font-family: 'Gideon Roman', cursive;
+    font-size: 1rem;
 }
 
 a {
     color: var(--clr-acc-100);
 }
-
-h1 {
-    grid-area: header;
+h3 {
+    grid-area: content;
+    text-align: center;
+    font-family: 'Saira Stencil One', cursive;
 }
 .content {
     grid-area: content;
@@ -29,7 +32,7 @@ h1 {
 @media (min-width: 768px) {
     body {
         grid-template-areas:
-            "header  header  header  header  header  header  header  header  header  header  icons  icons"
+            "header  header  header  header  header  header  header  header  search  search  icons  icons"
             "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
             "content content content content content content content content content content content content";
         height: revert;
