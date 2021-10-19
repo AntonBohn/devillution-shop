@@ -6,6 +6,7 @@
 <body>
     <header>
         <span class="iconify logo" data-icon="mdi-nuke"></span>
+        <h2>NUKE WARE STORE</h2>
     </header>
     <div class="content">
         <main>
