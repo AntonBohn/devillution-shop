@@ -1,0 +1,35 @@
+:root {
+
+    --hue-primary: 215;
+    --sat-primary: 78%;
+    --lit-primary: 56%;
+
+    --hue-secondary: calc(var(--hue-primary) + 59);
+    --hue-tertiary: calc(var(--hue-primary) + 203);
+
+    --sat-secondary: calc(var(--sat-primary));
+    --sat-tertiary: calc(var(--sat-primary));
+
+    --sat-accent-one: calc(var(--sat-primary) - 40%);
+    --sat-accent-two: calc(var(--sat-tertiary) - 40%);
+
+    --lit-secondary: calc(var(--lit-primary) + 26%);
+    --lit-tertiary: calc(var(--lit-primary) + 26%);
+
+    --clr-primary: hsla(var(--hue-primary), var(--sat-primary), var(--lit-primary), 1);
+    --clr-secondary: hsla(var(--hue-secondary), var(--sat-secondary), var(--lit-secondary), 1);
+    --clr-tertiary: hsla(var(--hue-tertiary), var(--sat-tertiary), var(--lit-tertiary), 1);
+
+    --clr-accent-one: hsla(var(--hue-primary), var(--sat-accent-one), var(--lit-primary));
+    --clr-accent-two: hsla(var(--hue-tertiary), var(--sat-accent-two), var(--lit-tertiary));
+
+    --clr-bg-100: hsla(0, 0%, 100%, 1);
+    --clr-bg-200: hsla(0, 0%, 80%, 1);
+    --clr-fg-100: hsla(0, 0%, 0%, .85);
+
+
+    --clr-bg-dark-100: hsla(210, 50%, 20%, 1);
+    --clr-fg-dark-100: hsla(0, 0%, 100%, .85);
+
+    --clr-acc-100: hsla(210, 50%, 60%, 1);
+}

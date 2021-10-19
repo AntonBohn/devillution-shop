@@ -1,0 +1,25 @@
+footer {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+    flex-flow: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 2rem .5rem;
+    margin-top: 3rem;
+    background: var(--clr-bg-dark-100);
+    color: var(--clr-fg-dark-100);
+}
+footer a {
+    color: var(--clr-fg-dark-100);
+}
+footer ul {
+    list-style-type: none;
+    display: flex;
+    gap: .5rem;
+}
+footer .social-icons .iconify {
+    font-size: 1.5rem;
+}
