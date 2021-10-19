@@ -16,13 +16,7 @@
             @include('layout.footer')
         </footer>
     </div>
-    <nav id="main-navigation">
-        <div>Maus</div>
-        <div>Tastatur</div>
-        <div>Mauspad</div>
-        <div>Monitior</div>
-        <div>Headset</div>
-    </nav>
+    @include('components.main-nav')
     <div class="icons">
         <div class="button-account">
             <span class="iconify" data-icon="mdi-account-outline"></span>
