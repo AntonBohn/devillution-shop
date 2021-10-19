@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home', ['pageTitle' => 'Home', 'products' => Product::all()->take(6)]);
+    return view('home', [
+        'pageTitle' => 'Home',
+        'products' => Product::all()->take(6),
+        'bestsellers' => Product::all()->take(6)
+    ]);
 });
 
 Route::get('/playground', function () {
