@@ -5,14 +5,16 @@
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
-    padding:  0 1rem;
+    padding: .5rem 1rem;
     background: white;
-    font-size: 2rem;
-    grid-area: icons
+    grid-area: icons;
+    align-items: center;
+    gap: .5rem;
 }
 .action-icons [class^="button-"] {
-    padding: .5rem;
     cursor: pointer;
+    font-size: 2rem;
+    height: 2rem;
 }
 @media (min-width: 768px) {
     .action-icons {

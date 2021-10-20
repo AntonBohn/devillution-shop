@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('home', [
         'pageTitle' => 'Home',
         'products' => Product::all()->take(6),
-        'bestsellers' => Product::all()->take(6)
+        'bestsellers' => Product::all()->skip(6)->take(6)
     ]);
 });
 

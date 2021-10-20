@@ -1,7 +1,21 @@
+#mini-search {
+    padding: .5rem;
+}
 #mini-search label {
     display: flex;
+    gap: .5rem;
+    font-size: 1.4rem;
 }
-
+#mini-search input {
+    border-style: none;
+    border-color: var(--clr-bg-dark-100);
+    flex-grow: 1;
+    border-width: 1px;
+}
+#mini-search input:focus-visible {
+    outline: none;
+    border-bottom-style: solid;
+}
 @media (min-width: 768px) {
     #mini-search {
         position: revert;
@@ -11,5 +25,12 @@
         grid-area: search;
         display: grid;
         place-items: center;
+    }
+    #mini-search input {
+        border-style: none none solid;
+        flex-grow: revert;
+    }
+    #mini-search label {
+        font-size: 1.2rem;
     }
 }
