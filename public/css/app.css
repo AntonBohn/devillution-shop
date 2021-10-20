@@ -31,7 +31,7 @@ h3 {
 @media (min-width: 768px) {
     body {
         grid-template-areas:
-            "ch-left header  header  header  header  header  header  header  header  search  search  search  icons ch-right"
+            "ch-left header  header  header  header  header  header  header  header  search  search  icons   icons   ch-right"
             "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
             "content content content content content content content content content content content content content content";
         height: revert;
@@ -158,6 +158,12 @@ header h2 {
     outline: none;
     border-bottom-style: solid;
 }
+.button-mini-search {
+    display: none;
+}
+#search-animation-trigger {
+    display: none;
+}
 @media (min-width: 768px) {
     #mini-search {
         position: revert;
@@ -173,7 +179,21 @@ header h2 {
         flex-grow: revert;
     }
     #mini-search label {
-        font-size: 1.2rem;
+        font-size: 1.9rem;
+    }
+    .button-mini-search {
+        display: revert;
+    }
+    input {
+        border-width: 1px;
+        border-color: var(--clr-bg-dark-100);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 200ms ease-out;
+        position: fixed;
+    }
+    #search-animation-trigger:checked ~ input {
+        transform: scaleX(1);
     }
 }
 

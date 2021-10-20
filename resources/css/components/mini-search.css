@@ -16,6 +16,12 @@
     outline: none;
     border-bottom-style: solid;
 }
+.button-mini-search {
+    display: none;
+}
+#search-animation-trigger {
+    display: none;
+}
 @media (min-width: 768px) {
     #mini-search {
         position: revert;
@@ -31,6 +37,20 @@
         flex-grow: revert;
     }
     #mini-search label {
-        font-size: 1.2rem;
+        font-size: 1.9rem;
+    }
+    .button-mini-search {
+        display: revert;
+    }
+    input {
+        border-width: 1px;
+        border-color: var(--clr-bg-dark-100);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 200ms ease-out;
+        position: fixed;
+    }
+    #search-animation-trigger:checked ~ input {
+        transform: scaleX(1);
     }
 }

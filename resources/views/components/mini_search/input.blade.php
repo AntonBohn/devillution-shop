@@ -1,6 +1,6 @@
 <div id="mini-search" class="slide-up-container">
     <label>
-        <span class="iconify" data-icon="mdi-magnify"></span>
+        <input type="checkbox" id="search-animation-trigger">
         <input type="search" placeholder="Suche">
     </label>
 </div>

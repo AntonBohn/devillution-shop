@@ -1,4 +1,7 @@
 <div class="action-icons">
+    <div class="button-mini-search">
+        @include('components.mini_search.trigger')
+    </div>
     <div class="button-account">
         <span class="iconify" data-icon="mdi-account-outline"></span>
     </div>

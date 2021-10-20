@@ -28,7 +28,7 @@ h3 {
 @media (min-width: 768px) {
     body {
         grid-template-areas:
-            "ch-left header  header  header  header  header  header  header  header  search  search  search  icons ch-right"
+            "ch-left header  header  header  header  header  header  header  header  search  search  icons   icons   ch-right"
             "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
             "content content content content content content content content content content content content content content";
         height: revert;
