@@ -3,7 +3,7 @@
 }
 #mini-search label {
     display: flex;
-    gap: .5rem;
+    gap: var(--gap-small);
     font-size: 1.4rem;
 }
 #mini-search input {

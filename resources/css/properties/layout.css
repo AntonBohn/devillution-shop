@@ -1,3 +1,6 @@
 :root {
     --content-padding: .5rem;
+    --gap-big: 1.5rem;
+    --gap: 1rem;
+    --gap-small: .5rem;
 }

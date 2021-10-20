@@ -9,7 +9,7 @@
     background: white;
     grid-area: icons;
     align-items: center;
-    gap: .5rem;
+    gap: var(--gap-small);
 }
 .action-icons [class^="button-"] {
     cursor: pointer;

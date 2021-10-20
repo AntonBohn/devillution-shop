@@ -42,6 +42,9 @@ h3 {
 
 :root {
     --content-padding: .5rem;
+    --gap-big: 1.5rem;
+    --gap: 1rem;
+    --gap-small: .5rem;
 }
 
 :root {
@@ -89,7 +92,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: .5rem;
+    gap: var(--gap-small);
 }
 header .logo {
     font-size: 2rem;
@@ -145,7 +148,7 @@ header h2 {
 }
 #mini-search label {
     display: flex;
-    gap: .5rem;
+    gap: var(--gap-small);
     font-size: 1.4rem;
 }
 #mini-search input {
@@ -208,7 +211,7 @@ header h2 {
     background: white;
     grid-area: icons;
     align-items: center;
-    gap: .5rem;
+    gap: var(--gap-small);
 }
 .action-icons [class^="button-"] {
     cursor: pointer;
@@ -264,7 +267,7 @@ footer {
     flex-flow: wrap;
     flex-direction: column;
     align-items: center;
-    gap: .5rem;
+    gap: var(--gap-small);
     padding: 2rem .5rem;
     margin-top: 3rem;
     background: var(--clr-bg-dark-100);
@@ -277,7 +280,7 @@ footer a {
 footer ul {
     list-style-type: none;
     display: flex;
-    gap: .5rem;
+    gap: var(--gap-small);
 }
 footer .social-icons .iconify {
     font-size: 1.5rem;
@@ -359,7 +362,7 @@ footer .social-icons .iconify {
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1rem;
+    gap: var(--gap);
     list-style-type: none;
 }
 
