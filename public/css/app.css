@@ -31,7 +31,7 @@ h3 {
 @media (min-width: 768px) {
     body {
         grid-template-areas:
-            "ch-left header  header  header  header  header  header  header  header  search  search  icons  icons ch-right"
+            "ch-left header  header  header  header  header  header  header  header  search  search  search  icons ch-right"
             "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
             "content content content content content content content content content content content content content content";
         height: revert;
@@ -274,7 +274,7 @@ footer .social-icons .iconify {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 30vh;
+    height: 35vh;
     display: grid;
     place-content: center;
 }
@@ -339,7 +339,7 @@ footer .social-icons .iconify {
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 16px;
+    gap: 1rem;
     list-style-type: none;
 }
 

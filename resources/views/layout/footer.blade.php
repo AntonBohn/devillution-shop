@@ -1,7 +1,7 @@
 <ul>
     <li><a href="#">Services</a></li>
     <li><a href="#">About Us</a></li>
-    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Privacy-Policy</a></li>
     <li><a href="#">Impressum</a></li>
 </ul>
 <span> Nuke Ware Store © 2021</span>
