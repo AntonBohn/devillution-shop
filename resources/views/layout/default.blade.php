@@ -9,9 +9,7 @@
         <h2>NUKE WARE STORE</h2>
     </header>
     <div class="content">
-        <main>
-            @yield('content')
-        </main>
+        @yield('content')
         <footer>
             @include('layout.footer')
         </footer>

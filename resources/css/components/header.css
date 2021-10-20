@@ -3,7 +3,6 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: .5rem;
     gap: .5rem;
 }
 header .logo {

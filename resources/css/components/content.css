@@ -1,0 +1,19 @@
+.content {
+    grid-area: content;
+    overflow: auto;
+}
+
+@media (min-width: 768px) {
+    .content {
+        display: grid;
+        grid-template-columns: var(--content-padding) repeat(12, 1fr) var(--content-padding);
+        grid-template-areas:
+            "hero hero hero hero hero hero hero hero hero hero hero hero hero hero"
+            "pm-left main main main main main main main main main main main main pm-right"
+            "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+
+    .content main {
+        grid-area: main;
+    }
+}

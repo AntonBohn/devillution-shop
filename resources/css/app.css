@@ -1,12 +1,14 @@
 @import "layout/common.css";
 @import url('https://fonts.googleapis.com/css2?family=Emblema+One&family=Saira+Stencil+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Gideon+Roman&display=swap');
+@import "properties/layout.css";
 @import "properties/colors.css";
 @import "properties/images.css";
 /**
 Common layout parts
  */
 @import "components/header.css";
+@import "components/content.css";
 @import "components/main-nav.css";
 @import "components/mini-search.css";
 @import "components/action-icons.css";

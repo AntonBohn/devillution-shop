@@ -28,20 +28,20 @@ h3 {
     text-align: center;
     font-family: 'Saira Stencil One', cursive;
 }
-.content {
-    grid-area: content;
-    overflow: auto;
-}
 @media (min-width: 768px) {
     body {
         grid-template-areas:
-            "header  header  header  header  header  header  header  header  search  search  icons  icons"
-            "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
-            "content content content content content content content content content content content content";
+            "ch-left header  header  header  header  header  header  header  header  search  search  icons  icons ch-right"
+            "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
+            "content content content content content content content content content content content content content content";
         height: revert;
         overflow: revert;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: var(--content-padding) repeat(12, 1fr) var(--content-padding);
     }
+}
+
+:root {
+    --content-padding: .5rem;
 }
 
 :root {
@@ -89,7 +89,6 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: .5rem;
     gap: .5rem;
 }
 header .logo {
@@ -104,6 +103,26 @@ header h2 {
 @media (min-width: 768px) {
     header h2 {
         font-size: 2.5rem;
+    }
+}
+
+.content {
+    grid-area: content;
+    overflow: auto;
+}
+
+@media (min-width: 768px) {
+    .content {
+        display: grid;
+        grid-template-columns: var(--content-padding) repeat(12, 1fr) var(--content-padding);
+        grid-template-areas:
+            "hero hero hero hero hero hero hero hero hero hero hero hero hero hero"
+            "pm-left main main main main main main main main main main main main pm-right"
+            "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+
+    .content main {
+        grid-area: main;
     }
 }
 
@@ -244,6 +263,12 @@ footer .social-icons .iconify {
     font-size: 1.5rem;
 }
 
+@media (min-width: 768px) {
+    .content footer {
+        grid-area: footer;
+    }
+}
+
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1586078875290-c22eb791ad5d?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE3MTN8Sjl5clBhSFhSUVl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
     background-position: center;
@@ -275,6 +300,12 @@ footer .social-icons .iconify {
     margin: 0;
     padding: 0;
     line-height: 1;
+}
+
+@media (min-width: 768px) {
+    .content .hero-image {
+        grid-area: hero;
+    }
 }
 
 .product-tile {

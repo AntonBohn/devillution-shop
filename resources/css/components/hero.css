@@ -29,3 +29,9 @@
     padding: 0;
     line-height: 1;
 }
+
+@media (min-width: 768px) {
+    .content .hero-image {
+        grid-area: hero;
+    }
+}

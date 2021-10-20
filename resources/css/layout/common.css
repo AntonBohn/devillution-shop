@@ -25,18 +25,14 @@ h3 {
     text-align: center;
     font-family: 'Saira Stencil One', cursive;
 }
-.content {
-    grid-area: content;
-    overflow: auto;
-}
 @media (min-width: 768px) {
     body {
         grid-template-areas:
-            "header  header  header  header  header  header  header  header  search  search  icons  icons"
-            "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
-            "content content content content content content content content content content content content";
+            "ch-left header  header  header  header  header  header  header  header  search  search  icons  icons ch-right"
+            "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
+            "content content content content content content content content content content content content content content";
         height: revert;
         overflow: revert;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: var(--content-padding) repeat(12, 1fr) var(--content-padding);
     }
 }
