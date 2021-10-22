@@ -9,6 +9,7 @@ header .logo {
     font-size: 2rem;
     display: flex;
     color: var(--clr-bg-dark-100);
+    filter: drop-shadow(.2rem .2rem .1rem var(--clr-accent-one));
 }
 header h2 {
     font-size: 2rem;
