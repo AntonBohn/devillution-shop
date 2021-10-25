@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddImagestoProductsTable extends Migration
+class AddShortDescripiontoProductTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,7 @@ class AddImagestoProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->string('images');
-            $table->string('description');
+            $table->string('ShortDescription');
         });
     }
 
