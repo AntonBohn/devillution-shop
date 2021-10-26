@@ -8,7 +8,7 @@ header {
 header .logo {
     font-size: 2rem;
     display: flex;
-    color: var(--bg-clr-200);
+    color: var(--base-clr-200);
     filter: drop-shadow(.2rem .2rem .1rem var(--base-clr-100));
 }
 header h2 {
