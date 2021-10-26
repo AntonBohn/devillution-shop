@@ -37,14 +37,14 @@
     font-size: 2rem;
     width: 1rem;
     aspect-ratio: 1 / 2;
-    filter: drop-shadow(.2rem .2rem .1rem var(--clr-bg-dark-100));
+    filter: drop-shadow(.2rem .2rem .1rem var(--base-clr-200));
 }
 
 .product-tile .bookmark-icon div {
     position: absolute;
     inset: 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
-    background: var(--clr-tertiary);
+    background: var(--acc-clr-200);
 }
 
 /*Ich möchte den Namen unter dem Bild haben. OK
@@ -53,14 +53,14 @@
 
 .product-tile .product-name {
     display: flex;
-    color: var(--clr-bg-dark-100);
+    color: var(--base-clr-100);
     width: 100%;
     font-size: 1rem;
 }
 
 .product-tile .product-price {
     display: flex;
-    color: var(--clr-bg-dark-100);
+    color: var(--base-clr-100);
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -68,20 +68,6 @@
     top: 9rem;
     right: 1.1rem;
     bottom: 7.5rem;
-    left: auto;
-    font-size: 1rem;
-}
-
-.product-tile .product-price .icon-euro {
-    display: flex;
-    color: var(--clr-bg-dark-100);
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    inset: 0;
-    top: 0;
-    right: -.9rem;
-    bottom: .1rem;
     left: auto;
     font-size: 1rem;
 }
@@ -95,7 +81,7 @@
     right: auto;
     bottom: 1rem;
     left: auto;
-    color: var(--clr-bg-dark-100);
+    color: var(--base-clr-200);
     font-size: 1rem;
 }
 
@@ -109,15 +95,6 @@
         top: 9rem;
         right: 1.1rem;
         bottom: 5rem;
-        left: auto;
-        font-size: .8rem;
-    }
-
-    .product-tile .product-price .icon-euro {
-        inset: 0;
-        top: 0;
-        right: -.9rem;
-        bottom: .1rem;
         left: auto;
         font-size: .8rem;
     }
@@ -138,7 +115,7 @@
         transform: scale(1);
         transition: transform 1s ease-out;
         opacity: 1;
-        background: var(--clr-secondary);
+        background: var(--acc-clr-200);
     }
 }
 

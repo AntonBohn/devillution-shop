@@ -9,11 +9,11 @@ footer {
     gap: var(--gap-small);
     padding: 2rem .5rem;
     margin-top: 3rem;
-    background: var(--clr-bg-dark-100);
-    color: var(--clr-fg-dark-100);
+    background: var(--base-clr-200);
+    color: var(--acc-clr-200);
 }
 footer a {
-    color: var(--clr-fg-dark-100);
+    color: var(--acc-clr-200);
     text-decoration: none;
 }
 footer ul {

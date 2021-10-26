@@ -1,6 +1,6 @@
 .product-tile .product-price {
     display: flex;
-    color: var(--clr-bg-dark-100);
+    color: var(--base-clr-100);
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -12,35 +12,12 @@
     font-size: 1rem;
 }
 
-.product-tile .product-price .icon-euro {
-    display: flex;
-    color: var(--clr-bg-dark-100);
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    inset: 0;
-    top: 0;
-    right: -.9rem;
-    bottom: .1rem;
-    left: auto;
-    font-size: 1rem;
-}
-
 @media (min-width: 768px) {
     .product-tile .product-price {
         inset: 0;
         top: 9rem;
         right: 1.1rem;
         bottom: 5rem;
-        left: auto;
-        font-size: .8rem;
-    }
-
-    .product-tile .product-price .icon-euro {
-        inset: 0;
-        top: 0;
-        right: -.9rem;
-        bottom: .1rem;
         left: auto;
         font-size: .8rem;
     }

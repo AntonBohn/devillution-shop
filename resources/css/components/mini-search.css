@@ -8,7 +8,7 @@
 }
 #mini-search input {
     border-style: none;
-    border-color: var(--clr-bg-dark-100);
+    border-color: var(--base-clr-100);
     flex-grow: 1;
     border-width: 1px;
 }
@@ -44,7 +44,7 @@
     }
     input {
         border-width: 1px;
-        border-color: var(--clr-bg-dark-100);
+        border-color: var(--base-clr-100);
         transform: scaleX(0);
         transform-origin: right;
         transition: transform 200ms ease-out;
