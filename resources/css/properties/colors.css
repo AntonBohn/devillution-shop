@@ -1,8 +1,8 @@
 :root {
 
-    --hue-primary: 215;
-    --sat-primary: 78%;
-    --lit-primary: 56%;
+    --hue-primary: 212;
+    --sat-primary: 100%;
+    --lit-primary: 44%;
 
     --hue-secondary: calc(var(--hue-primary) + 59);
     --hue-tertiary: calc(var(--hue-primary) + 203);

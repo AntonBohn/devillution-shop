@@ -49,9 +49,9 @@ h3 {
 
 :root {
 
-    --hue-primary: 215;
-    --sat-primary: 78%;
-    --lit-primary: 56%;
+    --hue-primary: 212;
+    --sat-primary: 100%;
+    --lit-primary: 44%;
 
     --hue-secondary: calc(var(--hue-primary) + 59);
     --hue-tertiary: calc(var(--hue-primary) + 203);
@@ -98,6 +98,7 @@ header .logo {
     font-size: 2rem;
     display: flex;
     color: var(--clr-bg-dark-100);
+    filter: drop-shadow(.2rem .2rem .1rem var(--clr-accent-one));
 }
 header h2 {
     font-size: 2rem;
@@ -332,13 +333,14 @@ footer .social-icons .iconify {
 }
 
 .product-tile {
-    min-height: 400px;
+    min-height: 10px;
     text-align: center;
     background: #d7d7d7;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 3fr;
     grid-template-rows: 4fr 2fr;
+    position: relative;
 }
 
 .product-tile .image-wrapper {
@@ -358,6 +360,123 @@ footer .social-icons .iconify {
 .product-tile:hover .image-wrapper img {
     transform: scale(1.1);
 }
+
+.product-tile .bookmark-icon {
+    display: flex;
+    position: absolute;
+    top: -.1rem;
+    right: var(--gap-small);
+    bottom: auto;
+    left: auto;
+    font-size: 2rem;
+    width: 1rem;
+    aspect-ratio: 1 / 2;
+    filter: drop-shadow(.2rem .2rem .1rem var(--clr-bg-dark-100));
+}
+
+.product-tile .bookmark-icon div {
+    position: absolute;
+    inset: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+    background: var(--clr-tertiary);
+}
+
+/*Ich möchte den Namen unter dem Bild haben. OK
+ Und wenn man mit der Maus rüber geht soll der Name und kurzinformation angezeigt werden.
+ Außerdem möchte ich ein Euro zeichen hinter dem Preis haben. OK*/
+
+.product-tile .product-name {
+    display: flex;
+    color: var(--clr-bg-dark-100);
+    width: 100%;
+    font-size: 1rem;
+}
+
+.product-tile .product-price {
+    display: flex;
+    color: var(--clr-bg-dark-100);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    top: 9rem;
+    right: 1.1rem;
+    bottom: 7.5rem;
+    left: auto;
+    font-size: 1rem;
+}
+
+.product-tile .product-price .icon-euro {
+    display: flex;
+    color: var(--clr-bg-dark-100);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    top: 0;
+    right: -.9rem;
+    bottom: .1rem;
+    left: auto;
+    font-size: 1rem;
+}
+
+.product-tile .product-tinydescription {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    inset: 0;
+    top: auto;
+    right: auto;
+    bottom: 1rem;
+    left: auto;
+    color: var(--clr-bg-dark-100);
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .product-tile .product-name {
+        font-size: .9rem;
+    }
+
+    .product-tile .product-price {
+        inset: 0;
+        top: 9rem;
+        right: 1.1rem;
+        bottom: 5rem;
+        left: auto;
+        font-size: .8rem;
+    }
+
+    .product-tile .product-price .icon-euro {
+        inset: 0;
+        top: 0;
+        right: -.9rem;
+        bottom: .1rem;
+        left: auto;
+        font-size: .8rem;
+    }
+
+    .product-tile .product-tinydescription {
+        inset: 0;
+        top: auto;
+        right: auto;
+        bottom: 1rem;
+        left: auto;
+        font-size: .8rem;
+        width: 100%;
+        opacity: 0;
+    }
+    .product-tile .product-tinydescription:hover {
+        display: flex;
+        justify-content: center;
+        transform: scale(1);
+        transition: transform 1s ease-out;
+        opacity: 1;
+        background: var(--clr-secondary);
+    }
+}
+
 
 .product-list {
     display: grid;
