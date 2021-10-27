@@ -4,5 +4,5 @@ button.cta {
     color: var(--clr-fg-100);
     padding: var(--gap-small) var(--gap-big);
     font-weight: bold;
-    border-radius: 6px;
+    border-radius: .2rem;
 }

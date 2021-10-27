@@ -319,7 +319,7 @@ footer .social-icons .iconify {
 
 .product-tile {
     text-align: center;
-    border-radius: 10px;
+    border-radius: .7rem;
     display: grid;
     grid-template-columns: 3fr;
     grid-template-rows: -webkit-max-content;
@@ -436,7 +436,7 @@ button.cta {
     color: var(--clr-fg-100);
     padding: var(--gap-small) var(--gap-big);
     font-weight: bold;
-    border-radius: 6px;
+    border-radius: .2rem;
 }
 
 /**

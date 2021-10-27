@@ -1,6 +1,6 @@
 .product-tile {
     text-align: center;
-    border-radius: 10px;
+    border-radius: .7rem;
     display: grid;
     grid-template-columns: 3fr;
     grid-template-rows: max-content;
