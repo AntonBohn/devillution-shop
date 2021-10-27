@@ -5,7 +5,7 @@
     #main-nav {
         display: grid;
         grid-auto-flow: column;
-        background: var(--clr-bg-200);
+        background: var(--clr-fg-200);
     }
     #main-nav div {
         display: revert;

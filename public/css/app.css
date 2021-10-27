@@ -59,9 +59,8 @@ h3 {
     --acc-clr-200: hsl(calc(var(--base-hue) - 176) var(--base-sat) calc(var(--base-lit) + 17%));
 
     --clr-bg-100: hsla(0, 0%, 100%, 1);
-    --clr-bg-200: hsla(0, 0%, 80%, 1);
+    --clr-fg-200: hsla(0, 0%, 80%, .85);
     --clr-fg-100: hsla(0, 0%, 0%, .85);
-
 
     --clr-bg-dark-100: hsla(210, 50%, 20%, 1);
     --clr-fg-dark-100: hsla(0, 0%, 100%, .85);
@@ -83,7 +82,7 @@ header {
 header .logo {
     font-size: 2rem;
     display: flex;
-    color: var(--bg-clr-200);
+    color: var(--base-clr-200);
     filter: drop-shadow(.2rem .2rem .1rem var(--base-clr-100));
 }
 header h2 {
@@ -123,7 +122,7 @@ header h2 {
     #main-nav {
         display: grid;
         grid-auto-flow: column;
-        background: var(--clr-bg-200);
+        background: var(--clr-fg-200);
     }
     #main-nav div {
         display: revert;
@@ -258,10 +257,10 @@ footer {
     padding: 2rem .5rem;
     margin-top: 3rem;
     background: var(--base-clr-200);
-    color: var(--acc-clr-200);
+    color: var(--clr-fg-200);
 }
 footer a {
-    color: var(--acc-clr-200);
+    color: var(--clr-fg-200);
     text-decoration: none;
 }
 footer ul {
@@ -375,22 +374,13 @@ footer .social-icons .iconify {
 .product-tile .product-name {
     display: flex;
     color: var(--base-clr-100);
-    width: 100%;
+    width: 50%;
     font-size: 1rem;
 }
 
 .product-tile .product-price {
-    display: flex;
-    color: var(--base-clr-100);
-    justify-content: center;
-    align-items: center;
     position: absolute;
-    inset: 0;
-    top: 9rem;
-    right: 1.1rem;
-    bottom: 7.5rem;
-    left: auto;
-    font-size: 1rem;
+    inset: 9rem .1rem .5rem auto;
 }
 
 .product-tile .product-tinydescription {
@@ -402,22 +392,17 @@ footer .social-icons .iconify {
     right: auto;
     bottom: 1rem;
     left: auto;
-    color: var(--base-clr-200);
+    color: var(--base-clr-100);
     font-size: 1rem;
 }
 
 @media (min-width: 768px) {
     .product-tile .product-name {
-        font-size: .9rem;
+        font-size: 1rem;
     }
 
     .product-tile .product-price {
-        inset: 0;
-        top: 9rem;
-        right: 1.1rem;
-        bottom: 5rem;
-        left: auto;
-        font-size: .8rem;
+        inset: 9rem  .1rem -2rem auto;
     }
 
     .product-tile .product-tinydescription {
@@ -429,13 +414,14 @@ footer .social-icons .iconify {
         font-size: .8rem;
         width: 100%;
         opacity: 0;
+        color: var(--base-clr-200);
     }
     .product-tile .product-tinydescription:hover {
         display: flex;
         justify-content: center;
-        transform: scale(1);
-        transition: transform 1s ease-out;
         opacity: 1;
+        transform: scale(1);
+        transition: transform 1s ease-in-out;
         background: var(--acc-clr-200);
     }
 }
@@ -446,6 +432,14 @@ footer .social-icons .iconify {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: var(--gap);
     list-style-type: none;
+}
+
+.product-price {
+    display: flex;
+    color: var(--base-clr-100);
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
 }
 
 /**

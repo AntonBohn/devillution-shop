@@ -10,9 +10,8 @@
     --acc-clr-200: hsl(calc(var(--base-hue) - 176) var(--base-sat) calc(var(--base-lit) + 17%));
 
     --clr-bg-100: hsla(0, 0%, 100%, 1);
-    --clr-bg-200: hsla(0, 0%, 80%, 1);
+    --clr-fg-200: hsla(0, 0%, 80%, .85);
     --clr-fg-100: hsla(0, 0%, 0%, .85);
-
 
     --clr-bg-dark-100: hsla(210, 50%, 20%, 1);
     --clr-fg-dark-100: hsla(0, 0%, 100%, .85);

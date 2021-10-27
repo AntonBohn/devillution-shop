@@ -10,10 +10,10 @@ footer {
     padding: 2rem .5rem;
     margin-top: 3rem;
     background: var(--base-clr-200);
-    color: var(--acc-clr-200);
+    color: var(--clr-fg-200);
 }
 footer a {
-    color: var(--acc-clr-200);
+    color: var(--clr-fg-200);
     text-decoration: none;
 }
 footer ul {
