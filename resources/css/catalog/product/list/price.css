@@ -1,24 +1,7 @@
-.product-tile .product-price {
+.product-price {
     display: flex;
     color: var(--base-clr-100);
     justify-content: center;
     align-items: center;
-    position: absolute;
-    inset: 0;
-    top: 9rem;
-    right: 1.1rem;
-    bottom: 7.5rem;
-    left: auto;
     font-size: 1rem;
-}
-
-@media (min-width: 768px) {
-    .product-tile .product-price {
-        inset: 0;
-        top: 9rem;
-        right: 1.1rem;
-        bottom: 5rem;
-        left: auto;
-        font-size: .8rem;
-    }
 }

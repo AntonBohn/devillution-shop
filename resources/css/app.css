@@ -20,6 +20,7 @@ Common components
 @import "components/hero.css";
 @import "catalog/product/list/tile.css";
 @import "layout/catalog/product/list/grid.css";
+@import "catalog/product/list/price.css";
 /**
 Pages
  */
