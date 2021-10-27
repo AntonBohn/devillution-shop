@@ -1,12 +1,11 @@
 .product-tile {
-    min-height: 10px;
     text-align: center;
-    background: #d7d7d7;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 3fr;
-    grid-template-rows: 4fr 2fr;
+    grid-template-rows: max-content;
     position: relative;
+    box-shadow: var(--gap-small) var(--gap-small) var(--gap-big) hsla(0, 0%, 0%, .15);
 }
 
 .product-tile .image-wrapper {
@@ -25,6 +24,12 @@
 
 .product-tile:hover .image-wrapper img {
     transform: scale(1.1);
+}
+
+.product-tile .details {
+    padding: var(--gap-small);
+    display: flex;
+    flex-direction: column;
 }
 
 .product-tile .bookmark-icon {
@@ -47,62 +52,34 @@
     background: var(--acc-clr-200);
 }
 
-/*Ich möchte den Namen unter dem Bild haben. OK
- Und wenn man mit der Maus rüber geht soll der Name und kurzinformation angezeigt werden.
- Außerdem möchte ich ein Euro zeichen hinter dem Preis haben. OK*/
-
 .product-tile .product-name {
-    display: flex;
     color: var(--base-clr-100);
-    width: 50%;
-    font-size: 1rem;
+    font-size: .9rem;
+    margin-bottom: auto;
 }
 
 .product-tile .product-price {
-    position: absolute;
-    inset: 9rem .1rem .5rem auto;
+
 }
 
-.product-tile .product-tinydescription {
+.product-tile button.cta {
+    width: 100%;
+    background-color: var(--clr-fg-200);
+    transition: all 200ms linear;
+}
+
+.product-tile:hover button.cta {
+    background-color: var(--acc-clr-200);
+}
+
+.product-tile .add-to-cart {
     display: flex;
-    position: absolute;
-    justify-content: center;
-    inset: 0;
-    top: auto;
-    right: auto;
-    bottom: 1rem;
-    left: auto;
-    color: var(--base-clr-100);
-    font-size: 1rem;
+    justify-content: space-between;
 }
 
 @media (min-width: 768px) {
     .product-tile .product-name {
         font-size: 1rem;
-    }
-
-    .product-tile .product-price {
-        inset: 9rem  .1rem -2rem auto;
-    }
-
-    .product-tile .product-tinydescription {
-        inset: 0;
-        top: auto;
-        right: auto;
-        bottom: 1rem;
-        left: auto;
-        font-size: .8rem;
-        width: 100%;
-        opacity: 0;
-        color: var(--base-clr-200);
-    }
-    .product-tile .product-tinydescription:hover {
-        display: flex;
-        justify-content: center;
-        opacity: 1;
-        transform: scale(1);
-        transition: transform 1s ease-in-out;
-        background: var(--acc-clr-200);
     }
 }
 

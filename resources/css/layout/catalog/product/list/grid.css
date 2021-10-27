@@ -1,6 +1,16 @@
+:root {
+    --product-tile-width: 140px;
+    --lala: 602px;
+}
 .product-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--product-tile-width), 1fr));
     gap: var(--gap);
     list-style-type: none;
+}
+
+@media (min-width: 602px) and (max-width: 954px) {
+    .product-list {
+        grid-template-columns: repeat(3, minmax(var(--product-tile-width), 1fr));
+    }
 }

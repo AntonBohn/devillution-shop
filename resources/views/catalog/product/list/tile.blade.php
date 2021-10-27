@@ -2,10 +2,12 @@
     <div class="image-wrapper">
         <img src="{{$product->images}}" alt="">
     </div>
-    <span class="product-name">{{ $product->name }}</span>
-    <span class="product-tinydescription">{{ $product->TinyDescription }}</span>
+    <div class="details">
+        <h4 class="product-name">{{ $product->name }}</h4>
+        @include('catalog.product.price')
+        @include('catalog.product.add-to-cart')
+    </div>
     <div class="bookmark-icon">
         <div></div>
     </div>
-    @include('catalog.product.price')
 </li>
