@@ -1,0 +1,14 @@
+.text-content {
+    background: lightgray;
+    padding: 2em 6em;
+    margin: 6em calc(-1 * var(--gap));
+}
+.content-headline {
+    padding-bottom: 1.5rem;
+}
+.content-text {
+    columns: auto 35ch;
+    column-count: 2;
+    gap: var(--gap);
+    color: var(--base-clr-200);
+}
