@@ -1,7 +1,7 @@
 .text-content {
     background: lightgray;
-    padding: 2em 6em;
-    margin: 6em calc(-1 * var(--gap));
+    padding: 1em 3em;
+    margin: 2.5em calc(-1 * var(--gap));
 }
 .content-headline {
     padding-bottom: 1.5rem;
@@ -11,4 +11,10 @@
     column-count: 2;
     gap: var(--gap);
     color: var(--base-clr-200);
+}
+@media (min-width: 768px) {
+    .text-content {
+        padding: 2em 6em;
+        margin: 5em calc(-1 * var(--gap));
+    }
 }

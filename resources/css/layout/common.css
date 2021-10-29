@@ -22,7 +22,8 @@ a {
 }
 h3 {
     grid-area: content;
-    text-align: center;
+    text-align: left;
+    font-size: 1.5rem;
     font-family: 'Saira Stencil One', cursive;
 }
 @media (min-width: 768px) {

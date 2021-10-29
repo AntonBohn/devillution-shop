@@ -14,3 +14,9 @@
         grid-template-columns: repeat(3, minmax(var(--product-tile-width), 1fr));
     }
 }
+
+@media (min-width: 768px) {
+    .product-list {
+        gap: var(--gap-big);
+    }
+}

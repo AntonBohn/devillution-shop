@@ -2,7 +2,7 @@ button.cta {
     background: var(--acc-clr-200);
     border: none;
     color: var(--clr-fg-100);
-    padding: var(--gap-small) var(--gap-big);
+    padding: var(--gap-small) var(--gap);
     font-weight: bold;
     border-radius: .2rem;
 }

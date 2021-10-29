@@ -25,7 +25,8 @@ a {
 }
 h3 {
     grid-area: content;
-    text-align: center;
+    text-align: left;
+    font-size: 1.5rem;
     font-family: 'Saira Stencil One', cursive;
 }
 @media (min-width: 768px) {
@@ -123,6 +124,7 @@ header h2 {
         display: grid;
         grid-auto-flow: column;
         background: var(--clr-fg-200);
+        justify-content: space-around;
     }
     #main-nav div {
         display: revert;
@@ -280,8 +282,8 @@ footer .social-icons .iconify {
 
 .text-content {
     background: lightgray;
-    padding: 2em 6em;
-    margin: 6em calc(-1 * var(--gap));
+    padding: 1em 3em;
+    margin: 2.5em calc(-1 * var(--gap));
 }
 .content-headline {
     padding-bottom: 1.5rem;
@@ -293,6 +295,21 @@ footer .social-icons .iconify {
          column-count: 2;
     gap: var(--gap);
     color: var(--base-clr-200);
+}
+@media (min-width: 768px) {
+    .text-content {
+        padding: 2em 6em;
+        margin: 5em calc(-1 * var(--gap));
+    }
+}
+
+h3 {
+    margin: 1em .5em .5em;
+}
+@media (min-width: 768px) {
+    h3 {
+        margin: 3em 1em 1em;
+    }
 }
 
 .hero-image {
@@ -439,6 +456,12 @@ footer .social-icons .iconify {
     }
 }
 
+@media (min-width: 768px) {
+    .product-list {
+        gap: var(--gap-big);
+    }
+}
+
 .product-price {
     display: flex;
     color: var(--base-clr-100);
@@ -451,7 +474,7 @@ button.cta {
     background: var(--acc-clr-200);
     border: none;
     color: var(--clr-fg-100);
-    padding: var(--gap-small) var(--gap-big);
+    padding: var(--gap-small) var(--gap);
     font-weight: bold;
     border-radius: .2rem;
 }

@@ -1,0 +1,8 @@
+h3 {
+    margin: 1em .5em .5em;
+}
+@media (min-width: 768px) {
+    h3 {
+        margin: 3em 1em 1em;
+    }
+}
