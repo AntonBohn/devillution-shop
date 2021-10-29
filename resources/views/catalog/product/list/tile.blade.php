@@ -7,7 +7,9 @@
         @include('catalog.product.price')
         @include('catalog.product.add-to-cart')
     </div>
-    <div class="bookmark-icon">
-        <div></div>
-    </div>
+    @if ($product->highlight)
+        <div class="bookmark-icon">
+            <div></div>
+        </div>
+    @endif
 </li>
