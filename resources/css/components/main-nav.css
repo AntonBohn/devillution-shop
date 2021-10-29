@@ -6,6 +6,7 @@
         display: grid;
         grid-auto-flow: column;
         background: var(--clr-fg-200);
+        justify-content: space-around;
     }
     #main-nav div {
         display: revert;
