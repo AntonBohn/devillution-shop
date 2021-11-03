@@ -32,7 +32,7 @@ h3 {
 @media (min-width: 768px) {
     body {
         grid-template-areas:
-            "ch-left header  header  header  header  header  header  header  header  search  search  icons   icons   ch-right"
+            "ch-left header  header  header  header  header  header  header  header  search  search  search   icons   ch-right"
             "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
             "content content content content content content content content content content content content content content";
         height: revert;
@@ -164,6 +164,7 @@ header h2 {
         grid-area: search;
         display: grid;
         place-items: center;
+        justify-content: end;
     }
     #mini-search input {
         border-style: none none solid;
@@ -181,7 +182,6 @@ header h2 {
         transform: scaleX(0);
         transform-origin: right;
         transition: transform 200ms ease-out;
-        position: fixed;
     }
     #search-animation-trigger:checked ~ input {
         transform: scaleX(1);
