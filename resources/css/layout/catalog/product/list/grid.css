@@ -1,6 +1,5 @@
 :root {
     --product-tile-width: 140px;
-    --lala: 602px;
 }
 .product-list {
     display: grid;
