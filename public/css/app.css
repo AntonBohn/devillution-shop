@@ -12,6 +12,8 @@ body {
     color: var(--clr-fg-100);
     font-family: 'Gideon Roman', cursive;
     font-size: 1rem;
+    -webkit-padding-before: var(--mobile-header-height);
+            padding-block-start: var(--mobile-header-height);
 }
 
 a {
@@ -32,6 +34,8 @@ h3 {
             "content content content content content content content content content content content content content content";
         overflow: revert;
         grid-template-columns: var(--content-padding) repeat(12, 1fr) var(--content-padding);
+        -webkit-padding-before: revert;
+                padding-block-start: revert;
     }
 }
 
@@ -40,6 +44,13 @@ h3 {
     --gap-big: 1.5rem;
     --gap: 1rem;
     --gap-small: .5rem;
+
+    --mobile-header-height: 3rem;
+}
+@media (min-width: 768px) {
+    :root{
+        --mobile-header-height: 3.5rem;
+    }
 }
 
 :root {
@@ -73,6 +84,12 @@ header {
     justify-content: flex-start;
     align-items: center;
     gap: var(--gap-small);
+
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1;
+    background: var(--clr-bg-100);
+    height: var(--mobile-header-height);
 }
 header .logo {
     font-size: 2rem;
@@ -85,6 +102,13 @@ header h2 {
     font-family: 'Saira Stencil One', cursive;
 }
 @media (min-width: 768px) {
+    header {
+        position: revert;
+        inset: revert;
+        z-index: revert;
+        background: revert;
+        height: revert;
+    }
     header h2 {
         font-size: 2.5rem;
     }

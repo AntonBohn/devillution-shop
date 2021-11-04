@@ -4,6 +4,12 @@ header {
     justify-content: flex-start;
     align-items: center;
     gap: var(--gap-small);
+
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1;
+    background: var(--clr-bg-100);
+    height: var(--mobile-header-height);
 }
 header .logo {
     font-size: 2rem;
@@ -16,6 +22,13 @@ header h2 {
     font-family: 'Saira Stencil One', cursive;
 }
 @media (min-width: 768px) {
+    header {
+        position: revert;
+        inset: revert;
+        z-index: revert;
+        background: revert;
+        height: revert;
+    }
     header h2 {
         font-size: 2.5rem;
     }

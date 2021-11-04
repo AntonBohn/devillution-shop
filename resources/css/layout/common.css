@@ -10,6 +10,7 @@ body {
     color: var(--clr-fg-100);
     font-family: 'Gideon Roman', cursive;
     font-size: 1rem;
+    padding-block-start: var(--mobile-header-height);
 }
 
 a {
@@ -30,5 +31,6 @@ h3 {
             "content content content content content content content content content content content content content content";
         overflow: revert;
         grid-template-columns: var(--content-padding) repeat(12, 1fr) var(--content-padding);
+        padding-block-start: revert;
     }
 }

@@ -3,4 +3,11 @@
     --gap-big: 1.5rem;
     --gap: 1rem;
     --gap-small: .5rem;
+
+    --mobile-header-height: 3rem;
+}
+@media (min-width: 768px) {
+    :root{
+        --mobile-header-height: 3.5rem;
+    }
 }
