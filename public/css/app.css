@@ -306,7 +306,7 @@ footer .social-icons .iconify {
 .text-content {
     background: lightgray;
     padding: 1em 3em;
-    margin: 2.5em calc(-1 * var(--gap));
+    margin: 2.5em 0;
 }
 .content-headline {
     padding-bottom: 1.5rem;
@@ -322,7 +322,7 @@ footer .social-icons .iconify {
 @media (min-width: 768px) {
     .text-content {
         padding: 2em 6em;
-        margin: 5em calc(-1 * var(--gap));
+        margin: 5em calc(-1 * var(--content-padding));
     }
 }
 
