@@ -7,11 +7,6 @@ html {
     font-size: clamp(14px, 2vw, 20px);
 }
 body {
-    display: grid;
-    grid-template-rows: min-content auto min-content min-content;
-    grid-template-areas: "header" "content" "icons";
-    height: 100vh;
-    overflow: hidden;
     color: var(--clr-fg-100);
     font-family: 'Gideon Roman', cursive;
     font-size: 1rem;
@@ -28,11 +23,11 @@ h3 {
 }
 @media (min-width: 768px) {
     body {
+        display: grid;
         grid-template-areas:
             "ch-left header  header  header  header  header  header  header  header  search  search  search   icons   ch-right"
             "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav"
             "content content content content content content content content content content content content content content";
-        height: revert;
         overflow: revert;
         grid-template-columns: var(--content-padding) repeat(12, 1fr) var(--content-padding);
     }
