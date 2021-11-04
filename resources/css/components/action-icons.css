@@ -1,5 +1,4 @@
 .action-icons {
-    position: relative;
     z-index: 1;
     border-top: 1px solid black;
     display: grid;
@@ -10,6 +9,8 @@
     grid-area: icons;
     align-items: center;
     gap: var(--gap-small);
+    position: fixed;
+    inset: auto 0 0;
 }
 .action-icons [class^="button-"] {
     cursor: pointer;

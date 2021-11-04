@@ -11,6 +11,7 @@ body {
     font-family: 'Gideon Roman', cursive;
     font-size: 1rem;
     padding-block-start: var(--mobile-header-height);
+    padding-block-end: calc(3rem + 1px);
 }
 
 a {
@@ -32,5 +33,6 @@ h3 {
         overflow: revert;
         grid-template-columns: var(--content-padding) repeat(12, 1fr) var(--content-padding);
         padding-block-start: revert;
+        padding-block-end: revert;
     }
 }

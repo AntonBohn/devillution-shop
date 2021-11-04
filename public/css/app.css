@@ -14,6 +14,8 @@ body {
     font-size: 1rem;
     -webkit-padding-before: var(--mobile-header-height);
             padding-block-start: var(--mobile-header-height);
+    -webkit-padding-after: calc(3rem + 1px);
+            padding-block-end: calc(3rem + 1px);
 }
 
 a {
@@ -36,6 +38,8 @@ h3 {
         grid-template-columns: var(--content-padding) repeat(12, 1fr) var(--content-padding);
         -webkit-padding-before: revert;
                 padding-block-start: revert;
+        -webkit-padding-after: revert;
+                padding-block-end: revert;
     }
 }
 
@@ -207,7 +211,6 @@ header h2 {
 }
 
 .action-icons {
-    position: relative;
     z-index: 1;
     border-top: 1px solid black;
     display: grid;
@@ -218,6 +221,8 @@ header h2 {
     grid-area: icons;
     align-items: center;
     gap: var(--gap-small);
+    position: fixed;
+    inset: auto 0 0;
 }
 .action-icons [class^="button-"] {
     cursor: pointer;
