@@ -14,7 +14,7 @@ class AddShortDescripiontoProductTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->string('ShortDescription');
+            $table->string('ShortDescription')->default(null)->nullable(true);
         });
     }
 

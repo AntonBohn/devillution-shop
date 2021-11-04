@@ -31,6 +31,8 @@ class ProductsSeeder extends Seeder
                 'color' => $csv[2],
                 'material' => $csv[3],
                 'price' => $csv[4],
+                'images' => $csv[5],
+                'highlight' => (int)$csv[9],
             ]);
         }
     }

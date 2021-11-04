@@ -14,7 +14,7 @@ class AddTinyDescripiontoProductTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->string('TinyDescription');
+            $table->string('TinyDescription')->default(null)->nullable(true);
         });
     }
 

@@ -14,7 +14,7 @@ class AddHighlight extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->boolean('highlight');
+            $table->boolean('highlight')->default(0);
         });
     }
 

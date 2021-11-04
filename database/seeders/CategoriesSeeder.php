@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
-class CategorySeeder extends Seeder
+class CategoriesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -23,7 +23,7 @@ class CategorySeeder extends Seeder
         );
         foreach ($csvArray as $item) {
             $csv = str_getcsv($item);
-            DB::table('category')->insert([
+            DB::table('categories')->insert([
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
                 'name' => $csv[0],

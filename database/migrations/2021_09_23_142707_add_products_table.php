@@ -18,8 +18,8 @@ class AddProductsTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('sku');
-            $table->string('color');
-            $table->string('material');
+            $table->string('color')->default(null)->nullable(true);
+            $table->string('material')->default(null)->nullable(true);
             $table->float('price', 8, 2);
         });
     }
