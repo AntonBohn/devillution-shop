@@ -2,12 +2,11 @@
 
 namespace Database\Seeders;
 
-use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
-class CategoriesSeeder extends Seeder
+class CategoryProductRelationSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,20 +15,18 @@ class CategoriesSeeder extends Seeder
      */
     public function run()
     {
-        $csvString = Storage::get('private/category-table.csv');
+        $csvString = Storage::get('private/category_product_relation.csv');
         $csvArray = explode(
             "\n",
             trim($csvString)
         );
         foreach ($csvArray as $item) {
             $csv = str_getcsv($item);
-            DB::table('categories')->insert([
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-                'name' => $csv[0],
-                'image' => $csv[1],
-                'description' => $csv[2],
+            DB::table('category_product')->insert([
+                'category_id' => $csv[0],
+                'product_id' => $csv[1],
             ]);
         }
+
     }
 }
