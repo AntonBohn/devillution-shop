@@ -141,12 +141,18 @@ header h2 {
 #main-nav {
     grid-area: nav;
 }
+#main-nav a {
+    text-decoration: none;
+    color: var(--base-clr-200);
+}
 @media (min-width: 768px) {
     #main-nav {
         display: grid;
         grid-auto-flow: column;
         background: var(--clr-fg-200);
         justify-content: space-around;
+        -webkit-text-decoration-style: revert;
+                text-decoration-style: revert;
     }
     #main-nav div {
         display: revert;
