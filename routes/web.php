@@ -16,16 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    echo '<pre>';
-    $c = Category::find(2);
-    var_dump($c);
-    echo '</pre>';
-    echo '<pre>';
-    var_dump($c->products);
-    echo '</pre>';
-    exit;
     return view('home', [
         'pageTitle' => 'Home',
+        'categories' => Category::all(),
         'products' => Product::all()->take(6),
         'bestsellers' => Product::all()->skip(6)->take(6)
     ]);
@@ -34,6 +27,7 @@ Route::get('/', function () {
 Route::get('/category-{id}', function (int $id) {
     return view('category', [
         'pageTitle' => 'category',
+        'categories' => Category::all(),
         'category' => Category::find($id),
     ]);
 });

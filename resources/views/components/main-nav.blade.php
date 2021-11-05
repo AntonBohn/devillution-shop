@@ -1,7 +1,7 @@
 <nav id="main-nav" class="slide-up-container">
-    <div>Maus</div>
-    <div>Tastatur</div>
-    <div>Mauspad</div>
-    <div>Monitor</div>
-    <div>Headset</div>
+    @foreach($categories as $category)
+        <div>
+            <a href="/category-{{ $category->id }}">{{ $category->name }}</a>
+        </div>
+    @endforeach
 </nav>
