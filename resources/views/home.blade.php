@@ -1,7 +1,7 @@
 @extends('layout.default')
 
 @section('content')
-    @include('components.hero', ['header' => 'Lorem ipsum dolor sit amet'])
+    @include('components.hero', ['header' => 'Lorem ipsum dolor sit amet', 'image' => 'https://images.unsplash.com/photo-1586078875290-c22eb791ad5d?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE3MTN8Sjl5clBhSFhSUVl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'])
     <main>
         @include('components.catalog.product.mini-list', ['title' => 'Für Sie empfohlen', 'products' => $products])
         <div class="text-content">

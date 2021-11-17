@@ -24,6 +24,7 @@ Common components
 @import "layout/catalog/product/list/grid.css";
 @import "catalog/product/list/price.css";
 @import "catalog/product/add-to-cart.css";
+@import "catalog/product/list/category-page.css";
 /**
 Pages
  */

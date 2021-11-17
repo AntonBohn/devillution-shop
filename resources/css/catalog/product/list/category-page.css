@@ -1,0 +1,4 @@
+.category-page {
+    display: grid;
+    grid-area: main;
+}
