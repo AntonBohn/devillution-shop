@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductSearchController;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,8 @@ Route::get('/category-{id}', function (int $id) {
         'category' => Category::find($id),
     ]);
 });
+
+Route::get('/product-search', [ProductSearchController::class, 'search'])->name('product.search');
 
 
 

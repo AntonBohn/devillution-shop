@@ -14,7 +14,7 @@
             @include('layout.footer')
         </footer>
     </div>
-    @include('components.mini_search.input')
+    @include('components.mini-search.form')
     @include('components.main-nav')
     @include('components.action-icons')
 </body>

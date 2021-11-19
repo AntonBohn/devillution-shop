@@ -16,6 +16,9 @@
     outline: none;
     border-bottom-style: solid;
 }
+#mini-search button[type="submit"] {
+    display: none;
+}
 .button-mini-search {
     display: none;
 }
