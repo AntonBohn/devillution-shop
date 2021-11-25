@@ -5,7 +5,7 @@
 </head>
 <body>
     <header>
-        <span class="iconify logo" data-icon="mdi-nuke"></span>
+        <a href="{{ route('home') }}"><span class="iconify logo" data-icon="mdi-nuke"></span></a>
         <h2>NUKE WARE STORE</h2>
     </header>
     <div class="content">

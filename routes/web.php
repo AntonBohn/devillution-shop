@@ -23,15 +23,15 @@ Route::get('/', function () {
         'products' => Product::all()->take(6),
         'bestsellers' => Product::all()->skip(6)->take(6)
     ]);
-});
+})->name('home');
 
-Route::get('/category-{id}', function (int $id) {
+Route::get('/category-{category}', function (Category $category) {
     return view('category', [
         'pageTitle' => 'category',
         'categories' => Category::all(),
-        'category' => Category::find($id),
+        'category' => $category,
     ]);
-});
+})->name('category');
 
 Route::get('/product-search', [ProductSearchController::class, 'search'])->name('product.search');
 
