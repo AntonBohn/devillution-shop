@@ -1,9 +1,13 @@
 <li class="product-tile">
     <div class="image-wrapper">
-        <img src="{{$product->images}}" alt="">
+        <a href="{{ route('product', ['product' => $product]) }}">
+            <img src="{{$product->images}}" alt="">
+        </a>
     </div>
     <div class="details">
-        <h4 class="product-name">{{ $product->name }}</h4>
+        <h4 class="product-name">
+            <a href="{{ route('product', ['product' => $product]) }}">{{ $product->name }}</a>
+        </h4>
         @include('catalog.product.price')
         @include('catalog.product.add-to-cart')
     </div>

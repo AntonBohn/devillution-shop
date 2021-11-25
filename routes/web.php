@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductPageController;
 use App\Http\Controllers\ProductSearchController;
 use App\Models\Category;
 use App\Models\Product;
@@ -32,6 +33,8 @@ Route::get('/category-{category}', function (Category $category) {
         'category' => $category,
     ]);
 })->name('category');
+
+Route::get('product-page-{product}', [ProductPageController::class, 'renderProductPage'])->name('product');
 
 Route::get('/product-search', [ProductSearchController::class, 'search'])->name('product.search');
 
