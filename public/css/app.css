@@ -414,7 +414,10 @@ h3 {
 .product-tile .image-wrapper img {
     width: 100%
 }
-
+.product-tile a {
+    text-decoration: none;
+    color: var(--base-clr-100);
+}
 
 .product-tile .details {
     padding: var(--gap-small);
