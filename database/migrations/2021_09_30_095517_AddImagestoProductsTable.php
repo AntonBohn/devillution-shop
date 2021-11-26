@@ -15,7 +15,7 @@ class AddImagestoProductsTable extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             $table->string('images')->default(null)->nullable(true);
-            $table->string('description')->default(null)->nullable(true);
+            $table->text('description')->default(null)->nullable(true);
         });
     }
 

@@ -32,6 +32,7 @@ class ProductsSeeder extends Seeder
                 'material' => $csv[3],
                 'price' => $csv[4],
                 'images' => $csv[5],
+                'description' => $csv[6],
                 'highlight' => (int)$csv[9],
             ]);
         }

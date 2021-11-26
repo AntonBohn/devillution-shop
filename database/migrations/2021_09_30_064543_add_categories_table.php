@@ -19,7 +19,7 @@ class AddCategoriesTable extends Migration
           $table->timestamps();
           $table->string('name');
           $table->string('image');
-          $table->string('description');
+          $table->text('description');
         });
     }
 
