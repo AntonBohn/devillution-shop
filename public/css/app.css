@@ -452,8 +452,8 @@ h3 {
     margin-bottom: auto;
 }
 
-.product-tile .product-price {
-
+.product-tile .product-name a {
+    color: var(--base-clr-200);
 }
 
 .product-tile button.cta {
@@ -508,7 +508,7 @@ h3 {
 
 .product-price {
     display: flex;
-    color: var(--base-clr-100);
+    color: var(--base-clr-200);
     justify-content: center;
     align-items: center;
     font-size: 1.4rem;
@@ -526,6 +526,86 @@ button.cta {
 .category-page {
     display: grid;
     grid-area: main;
+}
+
+.product-page {
+    display: grid;
+    grid-area: main;
+    color: var(--base-clr-200);
+    grid-template-areas:
+    "image image"
+    "name name"
+    "price price"
+    "sd sd"
+    "descr descr";
+}
+
+.description-text {
+    background: var(--clr-fg-200);
+    padding: 2em 2em;
+    margin: 1.5em 0;
+    grid-area: descr;
+    font-size: 1.2rem;
+}
+
+.product-image {
+    grid-area: image;
+}
+.product-image img {
+    max-width: 100%;
+}
+
+.product-page-name {
+    font-size: 2rem;
+    justify-content: left;
+    grid-area: name;
+}
+
+.product-page .product-price {
+    font-size: 3rem;
+    justify-content: left;
+    grid-area: price;
+}
+
+.short-description-text {
+    font-size: 1.5rem;
+    grid-area: sd;
+}
+
+@media (min-width: 900px) {
+    .product-page {
+        grid-template-areas:
+            "image name name name name name name name name name name name"
+            "image  price price price price price price price price price price price"
+            "image sd sd sd sd sd sd sd sd sd sd sd"
+            "descr descr descr descr descr descr descr descr descr descr descr descr";
+        align-items: center;
+        grid-template-rows: -webkit-max-content;
+        grid-template-rows: max-content;
+    }
+    .description-text {
+        padding: 3em 3em;
+        margin: 2em;
+    }
+
+    .product-image {
+    }
+
+    .product-image img {
+        max-width: revert;
+    }
+
+    .product-page-name {
+        font-size: 3rem;
+    }
+
+    .product-page .product-price {
+        font-size: 3rem;
+    }
+
+    .short-description-text {
+        padding: revert;
+    }
 }
 
 /**
