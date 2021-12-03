@@ -3,11 +3,19 @@
     grid-area: main;
     color: var(--base-clr-200);
     grid-template-areas:
-    "image image"
-    "name name"
-    "price price"
-    "sd sd"
-    "descr descr";
+        "image"
+        "details"
+        "descr";
+}
+
+.product-details {
+    display: grid;
+    grid-template-areas:
+        'name'
+        'price'
+        'sd';
+    gap: var(--gap);
+    padding: .5rem;
 }
 
 .description-text {
@@ -45,13 +53,12 @@
 @media (min-width: 900px) {
     .product-page {
         grid-template-areas:
-            "image name name name name name name name name name name name"
-            "image  price price price price price price price price price price price"
-            "image sd sd sd sd sd sd sd sd sd sd sd"
-            "descr descr descr descr descr descr descr descr descr descr descr descr";
+            "image details"
+            "descr descr";
         align-items: center;
-        grid-template-rows: max-content;
+        grid-template-columns: min-content auto;
     }
+
     .description-text {
         padding: 3em 3em;
         margin: 2em;
@@ -74,5 +81,10 @@
 
     .short-description-text {
         padding: revert;
+    }
+
+    .product-details {
+        padding: 3rem;
+        gap: var(--gap);
     }
 }

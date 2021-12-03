@@ -5,13 +5,7 @@
         <div class="product-image">
             <img src="{{$product->images}}" alt="">
         </div>
-        <div class="product-page-name">
-            {{ $product->name }}
-        </div>
-        @include('catalog.product.price')
-        <div class="short-description-text">
-            {{ $product->ShortDescription }}
-        </div>
+        @include('product-details')
         <div class="description-text">
             {{ $product->description }}
         </div>
