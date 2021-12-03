@@ -5,7 +5,7 @@
         <div class="product-image">
             <img src="{{$product->images}}" alt="">
         </div>
-        @include('product-details')
+        @include('catalog.product.product-details')
         <div class="description-text">
             {{ $product->description }}
         </div>
