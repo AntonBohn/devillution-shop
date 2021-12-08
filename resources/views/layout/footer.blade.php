@@ -1,8 +1,7 @@
 <ul>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Privacy-Policy</a></li>
-    <li><a href="#">Impressum</a></li>
+    @foreach(\App\Models\CmsPage::all() as $cmsPage)
+    <li><a href="{{ route('cms.pages', ['cmsPage' => $cmsPage->id]) }}">{{ $cmsPage->name }}</a></li>
+    @endforeach
 </ul>
 <span> Nuke Ware Store © 2021</span>
 <ul class="social-icons">
