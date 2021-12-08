@@ -1,5 +1,5 @@
 <ul>
-    @foreach(\App\Models\CmsPage::all() as $cmsPage)
+    @foreach($cmsPages as $cmsPage)
     <li><a href="{{ route('cms.pages', ['cmsPage' => $cmsPage->id]) }}">{{ $cmsPage->name }}</a></li>
     @endforeach
 </ul>

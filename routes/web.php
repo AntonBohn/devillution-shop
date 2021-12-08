@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home', [
         'pageTitle' => 'Home',
-        'categories' => Category::all(),
         'products' => Product::all()->take(6),
         'bestsellers' => Product::all()->skip(6)->take(6)
     ]);
@@ -30,7 +29,6 @@ Route::get('/', function () {
 Route::get('/category-{category}', function (Category $category) {
     return view('category', [
         'pageTitle' => 'category',
-        'categories' => Category::all(),
         'category' => $category,
     ]);
 })->name('category');

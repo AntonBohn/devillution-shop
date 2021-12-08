@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\View\Composers\FooterCmsLinksComposer;
+use App\View\Composers\NavComposer;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        View::composer('components.main-nav', NavComposer::class);
+        View::composer('layout.footer', FooterCmsLinksComposer::class);
     }
 }

@@ -10,7 +10,6 @@ class CmsPageController extends Controller
 {
     public function render (CmsPage $cmsPage) {
         return view('cms.page', [
-            'categories' => Category::all(),
             'pageTitle' => $cmsPage->name,
             'cmsPage' => $cmsPage,
         ]);

@@ -17,7 +17,6 @@ class ProductSearchController extends Controller
 
         return view('product-search', [
             'pageTitle' => 'Suchergebnis',
-            'categories' => Category::all(),
             'products' => $products,
             'search' => $search,
         ]);

@@ -11,7 +11,6 @@ class ProductPageController extends Controller
     public function renderProductPage (Product $product) {
         return view('product-page', [
             'pageTitle' => 'product-page',
-            'categories' => Category::all(),
             'product' => $product,
         ]);
     }
