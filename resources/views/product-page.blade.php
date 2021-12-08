@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="product-page">
+        <div class="product-page-name">
+            {{ $product->name }}
+        </div>
         <div class="product-image">
             <img src="{{$product->images}}" alt="">
         </div>
@@ -10,5 +13,4 @@
             {{ $product->description }}
         </div>
     </div>
-    {{--    @include('catalog.product.add-to-cart')--}}
 @endsection

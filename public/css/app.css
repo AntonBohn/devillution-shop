@@ -533,6 +533,7 @@ button.cta {
     grid-area: main;
     color: var(--base-clr-200);
     grid-template-areas:
+        "name"
         "image"
         "details"
         "descr";
@@ -541,8 +542,8 @@ button.cta {
 .product-details {
     display: grid;
     grid-template-areas:
-        'name'
         'price'
+        'addtocart'
         'sd';
     gap: var(--gap);
     padding: .5rem;
@@ -563,9 +564,9 @@ button.cta {
     max-width: 100%;
 }
 
-.product-page-name {
-    font-size: 2rem;
-    justify-content: left;
+.product-page .product-page-name {
+    font-size: 3rem;
+    padding: var(--gap-big);
     grid-area: name;
 }
 
@@ -580,14 +581,21 @@ button.cta {
     grid-area: sd;
 }
 
-@media (min-width: 900px) {
+button.cta {
+    background-color: var(--clr-fg-200);
+}
+
+
+@media (min-width: 768px) {
     .product-page {
         grid-template-areas:
+            "image name "
             "image details"
             "descr descr";
         align-items: center;
         grid-template-columns: -webkit-min-content auto;
         grid-template-columns: min-content auto;
+        grid-auto-rows: auto 1fr;
     }
 
     .description-text {
@@ -615,9 +623,17 @@ button.cta {
     }
 
     .product-details {
-        padding: 3rem;
+        padding: 2rem;
         gap: var(--gap);
     }
+    button.cta {
+        max-width: 10rem;
+    }
+
+    button.cta:hover {
+        background-color: var(--acc-clr-200);
+    }
+
 }
 
 /**
