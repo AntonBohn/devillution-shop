@@ -6,7 +6,7 @@
             {{ $product->name }}
         </div>
         <div class="product-image">
-            <img src="{{$product->images}}" alt="">
+            @include('components.product.gallery')
         </div>
         @include('catalog.product.product-details')
         <div class="description-text">

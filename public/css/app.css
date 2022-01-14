@@ -587,16 +587,15 @@ button.cta {
     max-width: 10rem;
 }
 
-
 @media (min-width: 768px) {
     .product-page {
         grid-template-areas:
-            "pm-left pm-left image name pm-right"
-            "pm-left pm-left image details pm-right"
-            "descr descr descr descr descr";
+            ". image name ."
+            ". image details ."
+            "descr descr descr descr";
         align-items: center;
-        grid-template-columns: auto -webkit-min-content auto;
-        grid-template-columns: auto min-content auto;
+        grid-template-columns: 1fr -webkit-max-content 2fr 1fr;
+        grid-template-columns: 1fr max-content 2fr 1fr;
         grid-auto-rows: auto 1fr;
     }
 
@@ -606,11 +605,6 @@ button.cta {
     }
 
     .product-image {
-        padding-top: 2rem;
-    }
-
-    .product-image img {
-        max-width: revert;
     }
 
     .product-page-name {
@@ -623,11 +617,10 @@ button.cta {
 
     .short-description-text {
         padding: revert;
-        max-width: 20rem;
+        max-width: 30rem;
     }
 
     .product-details {
-        padding: 2rem;
         gap: var(--gap);
         grid-area: details;
     }
@@ -639,6 +632,39 @@ button.cta {
         background-color: var(--acc-clr-200);
     }
 
+    .thumbnails img {
+        opacity: .8;
+        cursor: pointer;
+        grid-area: thumbnails;
+    }
+
+    .thumbnails img:hover {
+        opacity: 1;
+    }
+
+    .thumbnails > img:nth-child(1) {
+        height: 5rem;
+    }
+
+    .thumbnails > img:nth-child(2) {
+        height: 5rem;
+    }
+
+    .thumbnails > img:nth-child(3) {
+        height: 5rem;
+    }
+
+    .product-gallery {
+        display: grid;
+        grid-template-areas:
+            "default-image"
+            "thumbnails";
+    }
+
+    .product-gallery img {
+        height: 26rem;
+        grid-area: default-image;
+    }
 }
 
 /**

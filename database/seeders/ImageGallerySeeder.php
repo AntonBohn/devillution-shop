@@ -22,9 +22,10 @@ class ImageGallerySeeder extends Seeder
         );
         foreach ($csvArray as $item) {
             $csv = str_getcsv($item);
-            DB::table('product_image')->insert([
+            DB::table('product_images')->insert([
                 'url' => $csv[0],
                 'product_id'=> $csv[1],
+                'default' => $csv[2],
             ]);
         }
     }
