@@ -2,8 +2,11 @@
 
 @section('content')
     <div class="cms-page">
-        <h1>{{ $cmsPage->name }}</h1>
-
-        <p>{{ $cmsPage->data }}</p>
+        <div class="pagetitle">
+            <h1>{{ $cmsPage->name }}</h1>
+        </div>
+        <div class="pagecontent">
+            <p>{{ $cmsPage->data }}</p>
+        </div>
     </div>
 @endsection

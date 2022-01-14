@@ -16,6 +16,7 @@ Common layout parts
 @import "components/footer.css";
 @import "components/home.text.css";
 @import "components/mini-list.css";
+@import "components/cms-page.css";
 /**
 Common components
  */
