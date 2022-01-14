@@ -1,3 +1,7 @@
+<?php
+use App\Models\CmsPage
+/* @var CmsPage $cmsPage */
+?>
 <ul>
     @foreach($cmsPages as $cmsPage)
     <li><a href="{{ route('cms.pages', ['cmsPage' => $cmsPage->id]) }}">{{ $cmsPage->name }}</a></li>

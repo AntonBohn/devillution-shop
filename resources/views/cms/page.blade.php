@@ -1,3 +1,7 @@
+<?php
+use App\Models\CmsPage
+/** @var CmsPage $cmsPage */
+?>
 @extends('layout.default')
 
 @section('content')

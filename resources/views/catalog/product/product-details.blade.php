@@ -1,3 +1,7 @@
+<?php
+use App\Models\Product
+/* @var Product $product */
+?>
 <div class="product-details">
     @include('catalog.product.price')
     @include('catalog.product.add-to-cart')

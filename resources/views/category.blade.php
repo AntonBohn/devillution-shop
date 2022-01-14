@@ -1,3 +1,7 @@
+<?php
+use App\Models\Category
+/* @var Category $category */
+?>
 @extends('layout.default')
 
 @section('content')

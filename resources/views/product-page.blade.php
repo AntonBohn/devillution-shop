@@ -1,3 +1,7 @@
+<?php
+use App\Models\Product
+/* @var Product $product */
+?>
 @extends('layout.default')
 
 @section('content')

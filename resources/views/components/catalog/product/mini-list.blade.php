@@ -1,3 +1,7 @@
+<?php
+use App\Models\Product
+/* @var Product $product */
+?>
 <div class="product-mini-list">
     <h3>{{ $title }}</h3>
     <ul class="product-list">

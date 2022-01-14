@@ -1,3 +1,7 @@
+<?php
+use App\Models\Category
+/* @var Category $categories */
+?>
 <nav id="main-nav" class="slide-up-container">
     @foreach($categories as $category)
         <div>
