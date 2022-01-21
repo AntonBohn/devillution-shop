@@ -10,7 +10,7 @@ use App\Models\CmsPage
 <span> Nuke Ware Store © 2021</span>
 <ul class="social-icons">
     <li class="button-Instagram">
-        <a href="#">
+        <a href="https://www.instagram.com/Devillution/">
         <span class="iconify" data-icon="mdi-instagram"></span>
         </a>
     </li>
