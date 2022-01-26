@@ -43,4 +43,17 @@ class Product extends Model
         }
         return $result;
     }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function crossselling() : BelongsToMany
+    {
+        return $this->belongsToMany(
+            Product::class,
+            'product_crossselling',
+            'product_id',
+            'crossselling_id'
+        );
+    }
 }

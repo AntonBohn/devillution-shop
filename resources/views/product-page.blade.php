@@ -16,5 +16,8 @@ use App\Models\Product
         <div class="description-text">
             {{ $product->description }}
         </div>
+        <div class="crossselling">
+            @include('components.catalog.product.mini-list', ['title' => 'Produkt Empfehlungen', 'products' => $product->crossselling->take(6)])
+        </div>
     </div>
 @endsection

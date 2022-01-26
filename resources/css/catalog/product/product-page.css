@@ -6,7 +6,8 @@
         "name"
         "image"
         "details"
-        "descr";
+        "descr"
+        "crs";
 }
 
 .product-details {
@@ -57,15 +58,20 @@
     max-width: 10rem;
 }
 
+.crossselling {
+    grid-area: crs;
+}
+
 @media (min-width: 768px) {
     .product-page {
         grid-template-areas:
             ". image name ."
             ". image details ."
-            "descr descr descr descr";
+            "descr descr descr descr"
+            "crs crs crs crs";
         align-items: center;
         grid-template-columns: 1fr max-content 2fr 1fr;
-        grid-auto-rows: auto 1fr;
+        grid-auto-rows: auto;
     }
 
     .description-text {

@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             CategoryProductRelationSeeder::class,
             CmsPagesSeeder::class,
             ImageGallerySeeder::class,
+            CrossSellingSeeder::class,
         ]);
     }
 }
