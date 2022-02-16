@@ -12,6 +12,7 @@ class CmsPageController extends Controller
         return view('cms.page', [
             'pageTitle' => $cmsPage->name,
             'cmsPage' => $cmsPage,
+            'bodyClass' => 'page-cms'
         ]);
     }
 }

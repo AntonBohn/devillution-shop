@@ -12,6 +12,7 @@ class ProductPageController extends Controller
         return view('product-page', [
             'pageTitle' => 'product-page',
             'product' => $product,
+            'bodyClass' => 'page-product'
         ]);
     }
 }

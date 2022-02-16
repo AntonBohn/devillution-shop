@@ -3,7 +3,7 @@
 <head>
     @include('layout.html-head')
 </head>
-<body>
+<body class="{{ $bodyClass }}">
     <header>
         <a href="{{ route('home') }}"><span class="iconify logo" data-icon="mdi-nuke"></span></a>
         <h2>NUKE WARE STORE</h2>

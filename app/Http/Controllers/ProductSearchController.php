@@ -19,6 +19,7 @@ class ProductSearchController extends Controller
             'pageTitle' => 'Suchergebnis',
             'products' => $products,
             'search' => $search,
+            'bodyClass' => 'page-product-search'
         ]);
     }
 }
