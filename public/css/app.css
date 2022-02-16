@@ -392,6 +392,59 @@ h3 {
     }
 }
 
+.slider {
+    position: relative;
+    overflow: hidden;
+    --move: 1;
+    z-index: 0;
+    aspect-ratio: 13 / 13;
+    width: 600px;
+    --transition-property: all;
+    margin-inline: auto;
+}
+
+
+.slider > * {
+    position: absolute;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    transition: var(--transition-property) 250ms ease-in-out;
+}
+
+.slider > *:not(.cur):not(.prev):not(.next) {
+    display: none;
+}
+
+
+.slider > .prev.prev {
+    transform: translateX(calc(var(--move) * -100%));
+    z-index: 0;
+}
+
+.slider > .next {
+    transform: translateX(calc(var(--move) * 100%));
+    z-index: 0;
+}
+
+.slider > .cur {
+    transform: translateX(0);
+    z-index: 1;
+
+}
+
+/* snap next slide to its position except for there are only two slides */
+.slider.moving .next {
+    /* calculate abs */
+    --abs: max(2 - var(--item-count), var(--item-count) - 2);
+    /* 1 if abs is not zero -> not exactly two slides */
+    --not-two: min(1, var(--abs));
+    /* 1 if not-two is zero -> exactly two slides */
+    --two: calc(1 - var(--not-two));
+    transition-duration: calc(var(--duration) * var(--two))
+}
+
 .hero-image {
     overflow: hidden;
     height: 35vh;
@@ -609,6 +662,7 @@ button.cta {
 .product-image {
     grid-area: image;
 }
+
 .product-image img {
     max-width: 100%;
 }
@@ -678,6 +732,7 @@ button.cta {
         gap: var(--gap);
         grid-area: details;
     }
+
     .product-page button.cta {
         max-width: 10rem;
     }
@@ -715,8 +770,7 @@ button.cta {
             "thumbnails";
     }
 
-    .product-gallery img {
-        height: 26rem;
+    .product-gallery .slider {
         grid-area: default-image;
     }
 }

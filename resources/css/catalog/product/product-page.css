@@ -31,6 +31,7 @@
 .product-image {
     grid-area: image;
 }
+
 .product-image img {
     max-width: 100%;
 }
@@ -99,6 +100,7 @@
         gap: var(--gap);
         grid-area: details;
     }
+
     .product-page button.cta {
         max-width: 10rem;
     }
@@ -136,8 +138,7 @@
             "thumbnails";
     }
 
-    .product-gallery img {
-        height: 26rem;
+    .product-gallery .slider {
         grid-area: default-image;
     }
 }
