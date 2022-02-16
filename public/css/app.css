@@ -398,7 +398,7 @@ h3 {
     --move: 1;
     z-index: 0;
     aspect-ratio: 13 / 13;
-    width: 600px;
+    width: 300px;
     --transition-property: all;
     margin-inline: auto;
 }
@@ -444,6 +444,15 @@ h3 {
     --two: calc(1 - var(--not-two));
     transition-duration: calc(var(--duration) * var(--two))
 }
+
+
+@media (min-width: 768px) {
+    .slider {
+        aspect-ratio: 13 / 13;
+        width: 600px;
+    }
+}
+
 
 .hero-image {
     overflow: hidden;
@@ -675,7 +684,7 @@ button.cta {
 
 .product-page .product-price {
     font-size: 3rem;
-    justify-content: left;
+    justify-content: center;
     grid-area: price;
 }
 
@@ -687,11 +696,15 @@ button.cta {
 .product-page button.cta {
     background-color: var(--clr-fg-200);
     cursor: pointer;
-    max-width: 10rem;
+    max-width: 15rem;
 }
 
 .crossselling {
     grid-area: crs;
+}
+
+.thumbnails img {
+    display: none;
 }
 
 @media (min-width: 768px) {
@@ -734,7 +747,7 @@ button.cta {
     }
 
     .product-page button.cta {
-        max-width: 10rem;
+        max-width: 15rem;
     }
 
     .product-page button.cta:hover {
