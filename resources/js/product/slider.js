@@ -33,14 +33,7 @@ class Slider {
     fwd() {
         if (this.moving) return;
         if (this.max === 1) {
-            this.moving = true;
-            // disable transition
-            this.transition = false;
-            requestAnimationFrame(() => {
-                this.direction = DIRECTIONS.fwd;
-                // exchange classes
-                this.slidesIfOnlyTwoSlides();
-            });
+            this.slidesIfOnlyTwoSlides(DIRECTIONS.fwd);
         } else {
             this.direction = DIRECTIONS.fwd;
             this.prepare();
@@ -54,14 +47,7 @@ class Slider {
     back() {
         if (this.moving) return;
         if (this.max === 1) {
-            this.moving = true;
-            // disable transition
-            this.transition = false;
-            requestAnimationFrame(() => {
-                this.direction = DIRECTIONS.back;
-                // exchange classes
-                this.slidesIfOnlyTwoSlides();
-            });
+            this.slidesIfOnlyTwoSlides(DIRECTIONS.back);
         } else {
             this.direction = DIRECTIONS.back;
             this.prepare();
@@ -72,35 +58,41 @@ class Slider {
         }
     }
 
-    slidesIfOnlyTwoSlides() {
-        // exchange classes
+    slidesIfOnlyTwoSlides(direction) {
+        this.moving = true;
+        // disable transition
+        this.transition = false;
         requestAnimationFrame(() => {
-            // re-enable transition
-            this.transition = true;
+            this.direction = direction;
+            // exchange classes
             requestAnimationFrame(() => {
-                this.slides[this.cur].addEventListener(
-                    "transitionend",
-                    () => {
-                        this.moving = false;
-                        requestAnimationFrame(() => {
-                            this.slides[this.cur].classList.replace(
-                                CLASSNAMES.prev,
-                                CLASSNAMES.next
-                            );
-                            this.cur = Math.abs(this.cur - 1);
-                            this.next = Math.abs(this.next - 1);
-                        });
-                    },
-                    { once: true }
-                );
-                this.slides[this.cur].classList.replace(
-                    CLASSNAMES.cur,
-                    CLASSNAMES.prev
-                );
-                this.slides[this.next].classList.replace(
-                    CLASSNAMES.next,
-                    CLASSNAMES.cur
-                );
+                // re-enable transition
+                this.transition = true;
+                requestAnimationFrame(() => {
+                    this.slides[this.cur].addEventListener(
+                        "transitionend",
+                        () => {
+                            this.moving = false;
+                            requestAnimationFrame(() => {
+                                this.slides[this.cur].classList.replace(
+                                    CLASSNAMES.prev,
+                                    CLASSNAMES.next
+                                );
+                                this.cur = Math.abs(this.cur - 1);
+                                this.next = Math.abs(this.next - 1);
+                            });
+                        },
+                        { once: true }
+                    );
+                    this.slides[this.cur].classList.replace(
+                        CLASSNAMES.cur,
+                        CLASSNAMES.prev
+                    );
+                    this.slides[this.next].classList.replace(
+                        CLASSNAMES.next,
+                        CLASSNAMES.cur
+                    );
+                });
             });
         });
     }
