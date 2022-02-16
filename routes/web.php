@@ -22,7 +22,8 @@ Route::get('/', function () {
     return view('home', [
         'pageTitle' => 'Home',
         'products' => Product::all()->take(6),
-        'bestsellers' => Product::all()->skip(6)->take(6)
+        'bestsellers' => Product::all()->skip(6)->take(6),
+        'bodyClass' => 'page-home'
     ]);
 })->name('home');
 
@@ -30,6 +31,7 @@ Route::get('/category-{category}', function (Category $category) {
     return view('category', [
         'pageTitle' => 'category',
         'category' => $category,
+        'bodyClass' => 'page-category'
     ]);
 })->name('category');
 

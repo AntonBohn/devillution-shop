@@ -7,10 +7,10 @@ const CLASSNAMES = {
 
 const DIRECTIONS = {
     back: -1,
-    fwd: 1,
+    fwd: 1
 };
 
-class Slider {
+export class Slider {
     constructor(el) {
         this.el = el;
         this.initSlides();
@@ -151,19 +151,3 @@ class Slider {
         return this.el.style.getPropertyValue("--item-count");
     }
 }
-
-const carousel = new Slider(document.querySelector(".slider"));
-document
-    .querySelector(".buttons button:first-child")
-    .addEventListener("click", carousel.back.bind(carousel));
-document
-    .querySelector(".buttons button:last-child")
-    .addEventListener("click", carousel.fwd.bind(carousel));
-
-const carousel2 = new Slider(document.querySelector(".slider2"));
-document
-    .querySelector(".buttons2 button:first-child")
-    .addEventListener("click", carousel2.back.bind(carousel2));
-document
-    .querySelector(".buttons2 button:last-child")
-    .addEventListener("click", carousel2.fwd.bind(carousel2));
