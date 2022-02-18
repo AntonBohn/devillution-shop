@@ -15,15 +15,17 @@ use App\Models\ProductImage
                 <img src="{{ $image->getImageUrl() }}" alt="">
             @endforeach
         </div>
-        <div class="buttons">
-            <button> Back</button>
-            <button> Fwd</button>
-        </div>
-        <div class="button-fwd">
-            <span class="iconify" data-icon="chevron-right"></span>
-        </div>
-        <div class="button-back">
-            <span class="iconify" data-icon="chevron-left"></span>
+{{--        <div class="buttons">--}}
+{{--            <button> Back</button>--}}
+{{--            <button> Fwd</button>--}}
+{{--        </div>--}}
+        <div class="slider-buttons">
+            <span class="slider-buttons__back">
+                <span class="iconify" data-icon="mdi-menu-left"></span>
+            </span>
+            <span class="slider-buttons__fwd">
+                <span class="iconify" data-icon="mdi-menu-right"></span>
+            </span>
         </div>
     </div>
 @endif

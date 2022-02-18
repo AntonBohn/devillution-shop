@@ -42,9 +42,9 @@
     grid-area: name;
 }
 
-.product-page .product-price {
+.product-details .product-price {
     font-size: 3rem;
-    justify-content: center;
+    justify-content: left;
     grid-area: price;
 }
 
@@ -91,7 +91,7 @@
         font-size: 3rem;
     }
 
-    .product-page .product-price {
+    .product-details .product-price  {
         font-size: 3rem;
     }
 
@@ -117,6 +117,7 @@
         opacity: .8;
         cursor: pointer;
         grid-area: thumbnails;
+        display: revert;
     }
 
     .thumbnails img:hover {

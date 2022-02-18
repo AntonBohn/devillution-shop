@@ -451,6 +451,11 @@ h3 {
         aspect-ratio: 13 / 13;
         width: 600px;
     }
+
+    .slider-buttons {
+        font-size: 3rem;
+        cursor: pointer;
+    }
 }
 
 
@@ -682,9 +687,9 @@ button.cta {
     grid-area: name;
 }
 
-.product-page .product-price {
+.product-details .product-price {
     font-size: 3rem;
-    justify-content: center;
+    justify-content: left;
     grid-area: price;
 }
 
@@ -732,7 +737,7 @@ button.cta {
         font-size: 3rem;
     }
 
-    .product-page .product-price {
+    .product-details .product-price  {
         font-size: 3rem;
     }
 
@@ -758,6 +763,7 @@ button.cta {
         opacity: .8;
         cursor: pointer;
         grid-area: thumbnails;
+        display: revert;
     }
 
     .thumbnails img:hover {
