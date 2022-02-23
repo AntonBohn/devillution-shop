@@ -10,15 +10,6 @@ use App\Models\ProductImage
                 <img src="{{ $image->getImageUrl() }}" alt="">
             @endforeach
         </div>
-        <div class="thumbnails">
-            @foreach($product->images as $key => $image)
-                <img src="{{ $image->getImageUrl() }}" alt="">
-            @endforeach
-        </div>
-{{--        <div class="buttons">--}}
-{{--            <button> Back</button>--}}
-{{--            <button> Fwd</button>--}}
-{{--        </div>--}}
         <div class="slider-buttons">
             <span class="slider-buttons__back">
                 <span class="iconify" data-icon="mdi-menu-left"></span>
@@ -26,6 +17,11 @@ use App\Models\ProductImage
             <span class="slider-buttons__fwd">
                 <span class="iconify" data-icon="mdi-menu-right"></span>
             </span>
+        </div>
+        <div class="thumbnails">
+            @foreach($product->images as $key => $image)
+                <img src="{{ $image->getImageUrl() }}" alt="">
+            @endforeach
         </div>
     </div>
 @endif

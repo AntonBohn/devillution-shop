@@ -445,16 +445,23 @@ h3 {
     transition-duration: calc(var(--duration) * var(--two))
 }
 
+.slider-buttons {
+    font-size: 3rem;
+    cursor: pointer;
+    display: flex;
+    place-content: space-between;
+    z-index: 1;
+}
+
 
 @media (min-width: 768px) {
     .slider {
-        aspect-ratio: 13 / 13;
         width: 600px;
     }
 
     .slider-buttons {
-        font-size: 3rem;
-        cursor: pointer;
+        margin: 43% 0;
+        grid-area: default-image;
     }
 }
 
