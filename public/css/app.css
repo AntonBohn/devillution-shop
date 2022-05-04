@@ -400,6 +400,7 @@ h3 {
     aspect-ratio: 13 / 13;
     width: 300px;
     --transition-property: all;
+    --transition-duration: 250ms;
     margin-inline: auto;
 }
 
@@ -410,7 +411,7 @@ h3 {
     -o-object-fit: cover;
        object-fit: cover;
     height: 100%;
-    transition: var(--transition-property) 250ms ease-in-out;
+    transition: var(--transition-property) var(--transition-duration) ease-in-out;
 }
 
 .slider > *:not(.cur):not(.prev):not(.next) {
@@ -444,24 +445,30 @@ h3 {
     --two: calc(1 - var(--not-two));
     transition-duration: calc(var(--duration) * var(--two))
 }
-
 .slider-buttons {
-    font-size: 3rem;
-    cursor: pointer;
-    display: flex;
-    place-content: space-between;
-    z-index: 1;
+    display: none;
 }
 
 
 @media (min-width: 768px) {
+
+    .product-gallery-wrapper {
+        display: flex;
+        align-items: center;
+    }
     .slider {
         width: 600px;
     }
 
-    .slider-buttons {
-        margin: 43% 0;
+    .button-back {
         grid-area: default-image;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+    .button-fwd {
+        grid-area: default-image;
+        font-size: 3rem;
+        cursor: pointer;
     }
 }
 
@@ -738,6 +745,11 @@ button.cta {
     }
 
     .product-image {
+    }
+
+    .product-image img {
+        max-width: 600px;
+        max-height: 600px;
     }
 
     .product-page-name {
