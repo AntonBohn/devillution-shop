@@ -445,7 +445,11 @@ h3 {
     --two: calc(1 - var(--not-two));
     transition-duration: calc(var(--duration) * var(--two))
 }
-.slider-buttons {
+.button-back {
+    display: none;
+}
+
+.button-fwd {
     display: none;
 }
 
@@ -464,11 +468,13 @@ h3 {
         grid-area: default-image;
         font-size: 3rem;
         cursor: pointer;
+        display: revert;
     }
     .button-fwd {
         grid-area: default-image;
         font-size: 3rem;
         cursor: pointer;
+        display: revert;
     }
 }
 
@@ -783,22 +789,11 @@ button.cta {
         cursor: pointer;
         grid-area: thumbnails;
         display: revert;
+        height: 5rem;
     }
 
     .thumbnails img:hover {
         opacity: 1;
-    }
-
-    .thumbnails > img:nth-child(1) {
-        height: 5rem;
-    }
-
-    .thumbnails > img:nth-child(2) {
-        height: 5rem;
-    }
-
-    .thumbnails > img:nth-child(3) {
-        height: 5rem;
     }
 
     .product-gallery {

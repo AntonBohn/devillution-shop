@@ -23,6 +23,21 @@ export class Slider {
         return this;
     }
 
+    initListener() {
+        this.handlePointerDown = this.pointerDownHandler.bind(this);
+        this.handlePointerMove = this.pointerMoveHandler.bind(this);
+        this.handlePointerUp = this.pointerUpHandler.bind(this);
+        return this;
+    }
+
+    addListerner() {
+        this.slider.addEventListener("pointerdown", this.handlePointerDown);
+        document.addEventListener("pointermove", this.handlePointerMove);
+        document.addEventListener("pointerup", this.handlePointerUp);
+        document.addEventListener("pointerleave", this.handlePointerUp);
+        return this;
+    }
+
     initSlides() {
         this.slides = Array.from(this.el.querySelectorAll(":scope > *"));
         this.itemCount = this.slides.length;
@@ -34,44 +49,6 @@ export class Slider {
         this.slides[this.next].classList.add(CLASSNAMES.next);
         this.max > 1 && this.slides[this.prev].classList.add(CLASSNAMES.prev);
         return this;
-    }
-
-    fwd() {
-        if (this.moving) return;
-        if (this.max === 1) {
-            this.slidesIfOnlyTwoSlides(DIRECTIONS.fwd);
-        } else {
-            this.resetTransform();
-            this.direction = DIRECTIONS.fwd;
-            this.prepare();
-            this.cur = this.cur + 1 > this.max ? 0 : this.cur + 1;
-            this.setNeighbours();
-            this.apply();
-        }
-    }
-
-    back() {
-        if (this.moving) return;
-        if (this.max === 1) {
-            this.slidesIfOnlyTwoSlides(DIRECTIONS.back);
-        } else {
-            this.resetTransform();
-            this.direction = DIRECTIONS.back;
-            this.prepare();
-            this.cur = this.cur - 1 < 0 ? this.max : this.cur - 1;
-            this.setNeighbours();
-            this.apply();
-        }
-    }
-
-    setNeighbours() {
-        if (this.direction === DIRECTIONS.fwd) {
-            this.next = this.cur === this.max ? 0 : this.cur + 1;
-            this.prev = this.cur === 0 ? this.max : this.cur - 1;
-        } else {
-            this.next = this.cur === 0 ? this.max : this.cur - 1;
-            this.prev = this.cur === this.max ? 0 : this.cur + 1;
-        }
     }
 
     slidesIfOnlyTwoSlides(direction) {
@@ -118,34 +95,19 @@ export class Slider {
         });
     }
 
-    initListener() {
-        this.handlePointerDown = this.pointerDownHandler.bind(this);
-        this.handlePointerMove = this.pointerMoveHandler.bind(this);
-        this.handlePointerUp = this.pointerUpHandler.bind(this);
-        return this;
-    }
-
-    addListerner() {
-        this.slider.addEventListener("pointerdown", this.handlePointerDown);
-        document.addEventListener("pointermove", this.handlePointerMove);
-        document.addEventListener("pointerup", this.handlePointerUp);
-        document.addEventListener("pointerleave", this.handlePointerUp);
-        return this;
-    }
-
     pointerDownHandler(e) {
         e.preventDefault();
         if (this.moving) return;
         this.start = {
-            x: e.pageX
-        }
+            x: e.pageX,
+        };
         this.transitionDuration = 0;
         return this;
     }
 
     pointerMoveHandler(e) {
-        if(this.start) {
-            const deltaX =  e.pageX - this.start.x;
+        if (this.start) {
+            const deltaX = e.pageX - this.start.x;
 
             this.direction = deltaX < 0 ? DIRECTIONS.fwd : DIRECTIONS.back;
             this.slides[this.prev].classList.remove(CLASSNAMES.prev);
@@ -156,16 +118,24 @@ export class Slider {
                 this.slides[this.prev].classList.add(CLASSNAMES.prev);
             }
 
-            this.slides[this.cur].style.transform =  `translateX(${deltaX}px)`;
-            if ( this.direction === DIRECTIONS.fwd) {
-                this.slides[this.next].style.transform =  `translateX(calc(${deltaX}px + 100%))`;
+            this.slides[this.cur].style.transform = `translateX(${deltaX}px)`;
+            if (this.direction === DIRECTIONS.fwd) {
+                this.slides[
+                    this.next
+                    ].style.transform = `translateX(calc(${deltaX}px + 100%))`;
                 if (this.max > 1) {
-                    this.slides[this.prev].style.transform =  `translateX(calc(${deltaX}px - 100%))`;
+                    this.slides[
+                        this.prev
+                        ].style.transform = `translateX(calc(${deltaX}px - 100%))`;
                 }
             } else {
-                this.slides[this.next].style.transform =  `translateX(calc(${deltaX}px - 100%))`;
+                this.slides[
+                    this.next
+                    ].style.transform = `translateX(calc(${deltaX}px - 100%))`;
                 if (this.max > 1) {
-                    this.slides[this.prev].style.transform =  `translateX(calc(${deltaX}px + 100%))`;
+                    this.slides[
+                        this.prev
+                        ].style.transform = `translateX(calc(${deltaX}px + 100%))`;
                 }
             }
         }
@@ -186,16 +156,77 @@ export class Slider {
         return this;
     }
 
-    set transitionDuration(dur) {
-        this.el.style.setProperty(
-            "--transition-duration",
-            "boolean" === typeof dur ? "" : `${dur}ms`
-        );
+    fwd() {
+        if (this.moving) return;
+        if (this.max === 1) {
+            this.slidesIfOnlyTwoSlides(DIRECTIONS.fwd);
+        } else {
+            this.resetTransform();
+            this.direction = DIRECTIONS.fwd;
+            this.prepare();
+            this.cur = this.cur + 1 > this.max ? 0 : this.cur + 1;
+            this.setNeighbours();
+            this.apply();
+        }
     }
 
+    back() {
+        if (this.moving) return;
+        if (this.max === 1) {
+            this.slidesIfOnlyTwoSlides(DIRECTIONS.back);
+        } else {
+            this.resetTransform();
+            this.direction = DIRECTIONS.back;
+            this.prepare();
+            this.cur = this.cur - 1 < 0 ? this.max : this.cur - 1;
+            this.setNeighbours();
+            this.apply();
+        }
+    }
 
+    jumpTo(idx) {
+        if (idx < 0 || idx > this.max || idx == this.cur) return;
+        this.transition = false;
+        this.resetTransform();
+        this.direction = idx > this.cur ? DIRECTIONS.fwd : DIRECTIONS.back;
+        this.prepare();
+        this.slides[idx].classList.add(CLASSNAMES.next);
+        this.slides[this.cur].classList.add(CLASSNAMES.cur);
+        requestAnimationFrame(() => {
+            const prev = this.cur;
+            this.cur = idx;
+            requestAnimationFrame(() => {
+                this.slides[this.cur].addEventListener("transitionend", () => {
+                    this.slides[this.prev].classList.remove(CLASSNAMES.prev);
+                    this.slides[this.next].classList.remove(CLASSNAMES.next);
+                    this.setNeighbours();
+                    this.slides[this.prev].classList.add(CLASSNAMES.prev);
+                    this.slides[this.next].classList.add(CLASSNAMES.next);
+                });
+                this.setNeighbours();
+                this.prev = prev;
+                if (this.next === this.prev) {
+                    this.next = idx === this.max ? this.max - 1 : 1;
+                }
+                this.slides[idx].classList.remove(CLASSNAMES.next);
+                this.slides[prev].classList.remove(CLASSNAMES.cur);
+                this.transition = true;
+                this.apply()
+            });
+        })
+    }
 
-prepare() {
+    setNeighbours() {
+        if (this.direction === DIRECTIONS.fwd) {
+            this.next = this.cur === this.max ? 0 : this.cur + 1;
+            this.prev = this.cur === 0 ? this.max : this.cur - 1;
+        } else {
+            this.next = this.cur === 0 ? this.max : this.cur - 1;
+            this.prev = this.cur === this.max ? 0 : this.cur + 1;
+        }
+    }
+
+    prepare() {
         this.slides[this.cur].classList.remove(CLASSNAMES.cur);
         this.slides[this.prev].classList.remove(CLASSNAMES.prev);
         this.slides[this.next].classList.remove(CLASSNAMES.next);
@@ -220,7 +251,6 @@ prepare() {
         this.slides[this.prev].style.transform = "";
     }
 
-
     set moving(m) {
         this.el.classList.toggle(CLASSNAMES.moving, m === true);
     }
@@ -238,6 +268,13 @@ prepare() {
 
     get transition() {
         return this.el.style.getPropertyValue("--transition-property");
+    }
+
+    set transitionDuration(dur) {
+        this.el.style.setProperty(
+            "--transition-duration",
+            "boolean" === typeof dur ? "" : `${dur}ms`
+        );
     }
 
     set direction(d) {

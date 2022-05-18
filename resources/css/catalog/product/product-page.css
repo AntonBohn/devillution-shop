@@ -123,22 +123,11 @@
         cursor: pointer;
         grid-area: thumbnails;
         display: revert;
+        height: 5rem;
     }
 
     .thumbnails img:hover {
         opacity: 1;
-    }
-
-    .thumbnails > img:nth-child(1) {
-        height: 5rem;
-    }
-
-    .thumbnails > img:nth-child(2) {
-        height: 5rem;
-    }
-
-    .thumbnails > img:nth-child(3) {
-        height: 5rem;
     }
 
     .product-gallery {

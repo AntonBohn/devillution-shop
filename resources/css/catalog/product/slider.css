@@ -50,7 +50,11 @@
     --two: calc(1 - var(--not-two));
     transition-duration: calc(var(--duration) * var(--two))
 }
-.slider-buttons {
+.button-back {
+    display: none;
+}
+
+.button-fwd {
     display: none;
 }
 
@@ -69,11 +73,13 @@
         grid-area: default-image;
         font-size: 3rem;
         cursor: pointer;
+        display: revert;
     }
     .button-fwd {
         grid-area: default-image;
         font-size: 3rem;
         cursor: pointer;
+        display: revert;
     }
 }
 
