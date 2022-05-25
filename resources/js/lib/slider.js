@@ -53,44 +53,28 @@ export class Slider {
 
     slidesIfOnlyTwoSlides(direction) {
         this.moving = true;
-        // disable transition
-        this.transition = false;
         requestAnimationFrame(() => {
             this.direction = direction;
-            // exchange classes
             requestAnimationFrame(() => {
-                // re-enable transition
-                this.transition = true;
-                requestAnimationFrame(() => {
-                    this.slides[this.cur].addEventListener(
-                        "transitionend",
-                        () => {
+                this.slides[this.cur].addEventListener(
+                    "transitionend",
+                    () => {
+                        requestAnimationFrame(() => {
+                            this.transition = false;
+                            this.slides[this.cur].className = CLASSNAMES.next;
+                            this.cur = Math.abs(this.cur - 1);
+                            this.next = Math.abs(this.next - 1);
                             requestAnimationFrame(() => {
-                                this.transition = false;
-                                this.slides[this.cur].classList.replace(
-                                    CLASSNAMES.prev,
-                                    CLASSNAMES.next
-                                );
-                                this.cur = Math.abs(this.cur - 1);
-                                this.next = Math.abs(this.next - 1);
-                                requestAnimationFrame(() => {
-                                    this.transition = true;
-                                    this.moving = false;
-                                });
+                                this.transition = true;
+                                this.moving = false;
                             });
-                        },
-                        { once: true }
-                    );
-                    this.resetTransform();
-                    this.slides[this.cur].classList.replace(
-                        CLASSNAMES.cur,
-                        CLASSNAMES.prev
-                    );
-                    this.slides[this.next].classList.replace(
-                        CLASSNAMES.next,
-                        CLASSNAMES.cur
-                    );
-                });
+                        });
+                    },
+                    { once: true }
+                );
+                this.resetTransform();
+                this.slides[this.cur].className = CLASSNAMES.prev;
+                this.slides[this.next].className = CLASSNAMES.cur;
             });
         });
     }
@@ -196,13 +180,25 @@ export class Slider {
             const prev = this.cur;
             this.cur = idx;
             requestAnimationFrame(() => {
-                this.slides[this.cur].addEventListener("transitionend", () => {
-                    this.slides[this.prev].classList.remove(CLASSNAMES.prev);
-                    this.slides[this.next].classList.remove(CLASSNAMES.next);
-                    this.setNeighbours();
-                    this.slides[this.prev].classList.add(CLASSNAMES.prev);
-                    this.slides[this.next].classList.add(CLASSNAMES.next);
-                });
+                this.slides[this.cur].addEventListener(
+                    "transitionend",
+                    () => {
+                        this.transition = false;
+                        requestAnimationFrame(() => {
+                            this.slides[this.prev].classList.remove(CLASSNAMES.prev);
+                            this.slides[this.next].classList.remove(CLASSNAMES.next);
+                            this.setNeighbours();
+                            if (this.max > 1) {
+                                this.slides[this.prev].classList.add(CLASSNAMES.prev);
+                            }
+                            this.slides[this.next].classList.add(CLASSNAMES.next);
+                            requestAnimationFrame(() => {
+                                this.transition = true;
+                            });
+                        });
+                    },
+                    { once: true }
+                );
                 this.setNeighbours();
                 this.prev = prev;
                 if (this.next === this.prev) {
@@ -211,9 +207,9 @@ export class Slider {
                 this.slides[idx].classList.remove(CLASSNAMES.next);
                 this.slides[prev].classList.remove(CLASSNAMES.cur);
                 this.transition = true;
-                this.apply()
+                this.apply();
             });
-        })
+        });
     }
 
     setNeighbours() {
