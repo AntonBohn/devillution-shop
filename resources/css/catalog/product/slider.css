@@ -8,6 +8,7 @@
     --transition-property: all;
     --transition-duration: 250ms;
     margin-inline: auto;
+    touch-action: none;
 }
 
 
